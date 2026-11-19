@@ -1,0 +1,371 @@
+{
+  "generatedAt": "2026-11-17T05:43:40.099Z",
+  "provider": "OpenStreetMap Nominatim",
+  "totalRecords": 45,
+  "approximateMatches": 0,
+  "unmatchedOrNeedsReview": 45,
+  "errors": 0,
+  "note": "Approximate matches are not verified ATM locations. All coordinates must be manually checked before being presented as exact ATM locations.",
+  "results": [
+    {
+      "id": 1,
+      "name": "Vasai Road",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 2,
+      "name": "Chandip",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 3,
+      "name": "Dahanu Gaon",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 4,
+      "name": "Dahanu Road",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 5,
+      "name": "Bordi",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 6,
+      "name": "Jawhar",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 7,
+      "name": "Murbad",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 8,
+      "name": "Wagale Estate",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 9,
+      "name": "Thane Town",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 10,
+      "name": "Turbhe",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 11,
+      "name": "Boisar",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 12,
+      "name": "Tarapur MIDC",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 13,
+      "name": "Kasara",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 14,
+      "name": "Khardi",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 15,
+      "name": "Shivali Ext. Counter",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 16,
+      "name": "Vasind",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 17,
+      "name": "Badlapur Ext. Counter",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 18,
+      "name": "Tokawade",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 19,
+      "name": "Zilla Parishad Ext. Counter",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 20,
+      "name": "Diva Station",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 21,
+      "name": "Asangaon",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 22,
+      "name": "Koparkhairane",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 23,
+      "name": "Vartak Nagar",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 24,
+      "name": "Bhiwandi",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 25,
+      "name": "Kinhawali",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 26,
+      "name": "Vangaon",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 27,
+      "name": "Kudus",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 28,
+      "name": "Khodala",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 29,
+      "name": "Shenva",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 30,
+      "name": "Ambadi",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 31,
+      "name": "Kon",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 32,
+      "name": "Mumbra",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 33,
+      "name": "Ulhasnagar-4",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 34,
+      "name": "Talasari",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 35,
+      "name": "Saralgaon",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 36,
+      "name": "Kalwa",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 37,
+      "name": "Vajreshwari",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 38,
+      "name": "Vikramgad",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 39,
+      "name": "Kasa",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 40,
+      "name": "Shahapur",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 41,
+      "name": "Wada",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 42,
+      "name": "Mankoli",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 43,
+      "name": "Manor",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 44,
+      "name": "Palghar",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    },
+    {
+      "id": 45,
+      "name": "Kalher",
+      "status": "unmatched",
+      "matchType": null,
+      "reason": "No result returned by Nominatim",
+      "matchedAddress": null
+    }
+  ]
+}

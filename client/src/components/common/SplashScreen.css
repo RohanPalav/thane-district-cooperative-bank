@@ -1,0 +1,240 @@
+/* -----------------------------------------
+   SPLASH SCREEN
+----------------------------------------- */
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  opacity: 1;
+
+  /*
+   * Base gradient:
+   * Blue → soft blue-green → mint green.
+   *
+   * A very subtle white overlay softens
+   * the transition without creating a white centre.
+   */
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.035) 0%,
+      rgba(255, 255, 255, 0.025) 50%,
+      rgba(255, 255, 255, 0.035) 100%
+    ),
+    linear-gradient(
+      135deg,
+      #8bbff7 0%,
+      #b5d3f5 27%,
+      #e3effb 41%,
+      #f5faf9 49%,
+      #f5fbf7 54%,
+      #e0f7eb 63%,
+      #b8efd4 78%,
+      #99f7c5 100%
+    );
+
+  background-size: 120% 120%;
+  background-position: 50% 50%;
+
+  animation: splash-background-flow 18s ease-in-out infinite alternate;
+
+  transition: opacity 1200ms ease-in-out;
+}
+
+.splash-screen--exiting {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* -----------------------------------------
+   CENTRED BANK IDENTITY
+----------------------------------------- */
+
+.splash-screen__content {
+  display: flex;
+  width: min(90%, 760px);
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  text-align: center;
+}
+
+.splash-screen__logo {
+  display: block;
+
+  width: min(78vw, 420px);
+  max-height: 42vh;
+  height: auto;
+
+  object-fit: contain;
+
+  opacity: 0;
+  transform: scale(0.94);
+
+  view-transition-name: bank-logo;
+
+  animation: splash-logo-appear 1400ms cubic-bezier(0.22, 1, 0.36, 1) 250ms
+    forwards;
+}
+
+.splash-screen__bank-name {
+  max-width: 720px;
+  margin-top: 22px;
+
+  color: #173e70;
+
+  font-size: clamp(1.15rem, 3.2vw, 2rem);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.025em;
+
+  opacity: 0;
+  transform: translateY(12px);
+
+  view-transition-name: bank-name;
+
+  animation: splash-name-appear 1100ms ease-out 900ms forwards;
+}
+
+/* -----------------------------------------
+   INTRODUCTION ANIMATIONS
+----------------------------------------- */
+
+@keyframes splash-background-flow {
+  from {
+    background-position: 40% 50%;
+  }
+
+  to {
+    background-position: 60% 50%;
+  }
+}
+
+@keyframes splash-logo-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes splash-name-appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -----------------------------------------
+   SHARED ELEMENT TRANSITION
+----------------------------------------- */
+
+html.bank-header-transition-target header a[aria-label] img {
+  view-transition-name: bank-logo;
+}
+
+html.bank-header-transition-target header a[aria-label] h1 {
+  view-transition-name: bank-name;
+}
+
+/* Slower movement into the header */
+
+::view-transition-group(bank-logo),
+::view-transition-group(bank-name) {
+  animation-duration: 1800ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(bank-logo),
+::view-transition-new(bank-logo) {
+  height: 100%;
+  object-fit: contain;
+}
+
+::view-transition-old(bank-name),
+::view-transition-new(bank-name) {
+  height: 100%;
+}
+
+::view-transition-old(root) {
+  animation: splash-root-out 1200ms ease-in both;
+}
+
+::view-transition-new(root) {
+  animation: splash-root-in 1200ms ease-out both;
+}
+
+@keyframes splash-root-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes splash-root-in {
+  from {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* -----------------------------------------
+   MOBILE RESPONSIVENESS
+----------------------------------------- */
+
+@media (max-width: 480px) {
+  .splash-screen__logo {
+    width: min(84vw, 340px);
+  }
+
+  .splash-screen__bank-name {
+    margin-top: 16px;
+  }
+}
+
+/* -----------------------------------------
+   REDUCED MOTION ACCESSIBILITY
+----------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-screen {
+    transition: none;
+    animation: none;
+  }
+
+  .splash-screen__logo,
+  .splash-screen__bank-name {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  ::view-transition-group(bank-logo),
+  ::view-transition-group(bank-name),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 1ms;
+  }
+}

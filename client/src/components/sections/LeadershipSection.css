@@ -1,0 +1,481 @@
+/* =========================================
+   OUR LEADERSHIP SECTION
+   ========================================= */
+
+.leadership-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+
+  padding: 76px 6.5% 58px;
+
+  background:
+    radial-gradient(
+      ellipse at 8% 10%,
+      rgba(229, 246, 238, 0.95) 0%,
+      rgba(229, 246, 238, 0) 48%
+    ),
+    radial-gradient(
+      ellipse at 92% 90%,
+      rgba(139, 191, 247, 0.13) 0%,
+      rgba(139, 191, 247, 0) 45%
+    ),
+    linear-gradient(120deg, #fffce3 0%, #f7fbf4 48%, #edf6f2 100%);
+
+  background-attachment: fixed;
+
+  color: #173e70;
+}
+
+.leadership-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   BACKGROUND DECORATIONS
+   ========================================= */
+
+.leadership-background-decoration {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.leadership-decoration-circle {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(20, 90, 66, 0.28);
+  border-radius: 50%;
+}
+
+.leadership-circle-one {
+  top: -190px;
+  right: -110px;
+  width: 430px;
+  height: 430px;
+}
+
+.leadership-circle-two {
+  bottom: -250px;
+  left: -150px;
+  width: 520px;
+  height: 520px;
+}
+
+/* =========================================
+   SECTION INTRODUCTION
+   ========================================= */
+
+.leadership-intro {
+  width: min(100%, 570px);
+  margin: 0 auto 48px;
+  text-align: center;
+
+  animation: leadershipIntroReveal 850ms ease both;
+}
+
+.leadership-eyebrow {
+  margin: 0 0 13px;
+  color: #145a42;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.6;
+}
+
+.leadership-heading {
+  margin: 0 0 15px;
+  color: #173e70;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.leadership-heading-accent {
+  color: #278b43;
+}
+
+.leadership-description {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #465365;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* =========================================
+   LEADERSHIP GRID
+   ========================================= */
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 42px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   INDIVIDUAL PROFILE
+   ========================================= */
+
+.leadership-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(24px);
+
+  animation: leadershipCardReveal 850ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.leadership-card-1 {
+  animation-delay: 150ms;
+}
+
+.leadership-card-2 {
+  animation-delay: 300ms;
+}
+
+.leadership-card-3 {
+  animation-delay: 450ms;
+}
+
+/* =========================================
+   PORTRAIT AND DECORATIVE FRAME
+   ========================================= */
+
+.leadership-portrait-area {
+  position: relative;
+  display: grid;
+  width: 190px;
+  height: 190px;
+  margin-bottom: 25px;
+  place-items: center;
+}
+
+.leadership-portrait-frame {
+  position: absolute;
+  width: 145px;
+  height: 145px;
+
+  border: 1.5px solid #278b43;
+
+  transform: rotate(13deg);
+  transition:
+    transform 450ms ease,
+    border-color 350ms ease;
+}
+
+.leadership-card-2 .leadership-portrait-frame {
+  transform: rotate(-13deg);
+  border-color: #4d91c5;
+}
+
+.leadership-card-3 .leadership-portrait-frame {
+  transform: rotate(13deg);
+  border-color: #278b43;
+}
+
+.leadership-portrait {
+  position: relative;
+  z-index: 1;
+
+  width: 138px;
+  height: 138px;
+  overflow: hidden;
+
+  border: 3px solid #fffef5;
+  border-radius: 50%;
+
+  background: #e5f6ee;
+
+  box-shadow: 0 10px 28px rgba(23, 62, 112, 0.13);
+
+  transition:
+    transform 450ms ease,
+    box-shadow 450ms ease;
+}
+
+.leadership-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Individual portrait positioning */
+
+.leadership-card-1 .leadership-portrait img {
+  object-position: center 16%;
+}
+
+.leadership-card-2 .leadership-portrait img {
+  object-position: center 30%;
+}
+
+.leadership-card-3 .leadership-portrait img {
+  object-position: center 16%;
+}
+
+/* =========================================
+   PROFILE TEXT
+   ========================================= */
+
+.leadership-profile-details {
+  width: 100%;
+  max-width: 280px;
+}
+
+.leadership-name {
+  margin: 0 0 9px;
+  color: #173e70;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.leadership-designation {
+  margin: 0;
+  color: #145a42;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* =========================================
+   HOVER INTERACTIONS
+   ========================================= */
+
+.leadership-card:hover .leadership-portrait {
+  transform: scale(1.045);
+  box-shadow: 0 15px 36px rgba(23, 62, 112, 0.2);
+}
+
+.leadership-card:hover .leadership-portrait-frame {
+  transform: rotate(0deg) scale(1.08);
+  border-color: #145a42;
+}
+
+.leadership-card-2:hover .leadership-portrait-frame {
+  transform: rotate(0deg) scale(1.08);
+}
+
+/* =========================================
+   INTERACTIVE BOTTOM LINE
+   ========================================= */
+
+.leadership-bottom-line {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  height: 2px;
+  margin: 55px auto 0;
+  overflow: visible;
+
+  background: rgba(20, 90, 66, 0.35);
+}
+
+/* Remove original static line segments */
+
+.leadership-bottom-line-accent,
+.leadership-bottom-line-rest {
+  display: none;
+}
+
+/* Moving green highlight */
+
+.leadership-bottom-line::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 33.333%;
+  height: 3px;
+
+  background: #278b43;
+
+  content: "";
+  transition:
+    left 450ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    width 350ms ease;
+}
+
+/* Highlight follows the hovered official */
+
+.leadership-section:has(.leadership-card-1:hover)
+  .leadership-bottom-line::before {
+  left: 0;
+}
+
+.leadership-section:has(.leadership-card-2:hover)
+  .leadership-bottom-line::before {
+  left: 33.333%;
+}
+
+.leadership-section:has(.leadership-card-3:hover)
+  .leadership-bottom-line::before {
+  left: 66.666%;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes leadershipIntroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leadershipCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 900px) {
+  .leadership-section {
+    padding: 65px 5% 48px;
+  }
+
+  .leadership-grid {
+    gap: 20px;
+  }
+
+  .leadership-portrait-area {
+    width: 170px;
+    height: 170px;
+  }
+
+  .leadership-portrait-frame {
+    width: 132px;
+    height: 132px;
+  }
+
+  .leadership-portrait {
+    width: 126px;
+    height: 126px;
+  }
+
+  .leadership-name {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 600px) {
+  .leadership-section {
+    padding: 55px 22px 42px;
+  }
+
+  .leadership-intro {
+    margin-bottom: 38px;
+  }
+
+  .leadership-eyebrow {
+    font-size: 10px;
+  }
+
+  .leadership-heading {
+    font-size: 36px;
+  }
+
+  .leadership-description {
+    font-size: 13px;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    max-width: 340px;
+  }
+
+  .leadership-portrait-area {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 18px;
+  }
+
+  .leadership-portrait-frame {
+    width: 140px;
+    height: 140px;
+  }
+
+  .leadership-portrait {
+    width: 132px;
+    height: 132px;
+  }
+
+  .leadership-name {
+    font-size: 16px;
+  }
+
+  .leadership-designation {
+    font-size: 12px;
+  }
+
+  .leadership-bottom-line {
+    margin-top: 42px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leadership-intro,
+  .leadership-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .leadership-portrait,
+  .leadership-portrait-frame,
+  .leadership-bottom-line::before {
+    transition: none;
+  }
+
+  .leadership-card:hover .leadership-portrait,
+  .leadership-card:hover .leadership-portrait-frame {
+    transform: none;
+  }
+}

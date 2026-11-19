@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+/* =========================================
+   THANE DCC BANK - GLOBAL DESIGN FOUNDATION
+   ========================================= */
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color: #263238;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  /* Brand colours */
+  --brand-blue: #5558b5;
+  --brand-blue-dark: #3e4095;
+  --brand-green: #18a96b;
+
+  /* Supporting colours */
+  --brand-blue-light: #edeeff;
+  --brand-green-light: #e9f7ef;
+
+  /* Neutral colours */
+  --surface: #ffffff;
+  --surface-secondary: #fafbff;
+  --text-primary: #263238;
+  --text-secondary: #5f6b73;
+  --border: #e3e7ed;
+
+  /* Layout */
+  --container-width: 1200px;
+}
+
+/* Tailwind custom design tokens */
+@theme {
+  --color-brand-blue: #5558b5;
+  --color-brand-blue-dark: #3e4095;
+  --color-brand-green: #18a96b;
+
+  --color-brand-blue-light: #edeeff;
+  --color-brand-green-light: #e9f7ef;
+
+  --color-surface: #ffffff;
+  --color-surface-secondary: #fafbff;
+
+  --color-text-primary: #263238;
+  --color-text-secondary: #5f6b73;
+
+  --color-border: #e3e7ed;
+
+  --font-sans: "Poppins", sans-serif;
+}
+
+/* =========================================
+   BASE STYLES
+   ========================================= */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-primary);
+    background-color: var(--surface);
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--brand-blue);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    color: #ffffff;
+    background-color: var(--brand-blue);
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY & MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================
+   NEWS / NOTICE TICKER ANIMATION
+   ========================================= */
+
+@keyframes announcementSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.announcement-slide {
+  animation: announcementSlide 650ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-slide {
+    animation: none;
+  }
+}
+
+/* =========================================
+   MARATHI LANGUAGE TYPOGRAPHY
+   ========================================= */
+
+html[lang="mr"] .welcome-section,
+html[lang="mr"] .quick-links-section,
+html[lang="mr"] .leadership-section {
+  font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", sans-serif;
+}
+
+/* Remove English-style letter spacing from Devanagari text */
+html[lang="mr"] .welcome-section *,
+html[lang="mr"] .quick-links-section *,
+html[lang="mr"] .leadership-section * {
+  letter-spacing: normal;
+}

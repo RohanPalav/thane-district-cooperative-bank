@@ -1,0 +1,407 @@
+[
+  {
+    "id": 1,
+    "name": "Vasai Road",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 2,
+    "name": "Chandip",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 3,
+    "name": "Dahanu Gaon",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 4,
+    "name": "Dahanu Road",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 5,
+    "name": "Bordi",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 6,
+    "name": "Jawhar",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 7,
+    "name": "Murbad",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 8,
+    "name": "Wagale Estate",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 9,
+    "name": "Thane Town",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 10,
+    "name": "Turbhe",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 11,
+    "name": "Boisar",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 12,
+    "name": "Tarapur MIDC",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 13,
+    "name": "Kasara",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 14,
+    "name": "Khardi",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 15,
+    "name": "Shivali Ext. Counter",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 16,
+    "name": "Vasind",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 17,
+    "name": "Badlapur Ext. Counter",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 18,
+    "name": "Tokawade",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 19,
+    "name": "Zilla Parishad Ext. Counter",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 20,
+    "name": "Diva Station",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 21,
+    "name": "Asangaon",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 22,
+    "name": "Koparkhairane",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 23,
+    "name": "Vartak Nagar",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 24,
+    "name": "Bhiwandi",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 25,
+    "name": "Kinhawali",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 26,
+    "name": "Vangaon",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 27,
+    "name": "Kudus",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 28,
+    "name": "Khodala",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 29,
+    "name": "Shenva",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 30,
+    "name": "Ambadi",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 31,
+    "name": "Kon",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 32,
+    "name": "Mumbra",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 33,
+    "name": "Ulhasnagar-4",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 34,
+    "name": "Talasari",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 35,
+    "name": "Saralgaon",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 36,
+    "name": "Kalwa",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 37,
+    "name": "Vajreshwari",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 38,
+    "name": "Vikramgad",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 39,
+    "name": "Kasa",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 40,
+    "name": "Shahapur",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 41,
+    "name": "Wada",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 42,
+    "name": "Mankoli",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 43,
+    "name": "Manor",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 44,
+    "name": "Palghar",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  },
+  {
+    "id": 45,
+    "name": "Kalher",
+    "latitude": null,
+    "longitude": null,
+    "matchedAddress": null,
+    "locationAccuracy": "unmatched",
+    "reason": "No result returned by Nominatim"
+  }
+]
