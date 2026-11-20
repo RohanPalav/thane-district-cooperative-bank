@@ -1,4 +1,4 @@
-import { branches } from "../src/data/branchData.js";
+import { atms } from "../src/data/atmData.js";
 import { writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,8 +10,6 @@ const OUTPUT_DIR = path.resolve(__dirname, "../src/data");
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "geocodedAtms.json");
 const REPORT_FILE = path.join(OUTPUT_DIR, "atmGeocodingReport.json");
 
-// IMPORTANT:
-// Replace YOUR_EMAIL with a valid contact email before running.
 const USER_AGENT =
   "TDCCBankWebsiteGeocoder/1.0 (ATM directory geocoding; contact: rohanpalav2004@gmail.com)";
 
@@ -29,28 +27,28 @@ function normalize(value) {
 }
 
 function extractPinCode(address) {
-  return address.match(/\b\d{6}\b/)?.[0] || null;
+  return String(address || "").match(/\b\d{6}\b/)?.[0] || null;
 }
 
-function checkLocationMatch(branch, result) {
+function checkLocationMatch(atm, result) {
   const displayName = normalize(result.display_name);
-  const branchName = normalize(branch.name);
-  const pinCode = extractPinCode(branch.address);
+  const atmName = normalize(atm.name);
+  const pinCode = extractPinCode(atm.address);
 
-  const nameMatched =
-    branchName.length >= 4 && displayName.includes(branchName);
+  const nameMatched = atmName.length >= 4 && displayName.includes(atmName);
 
-  const pinMatched = pinCode && result.display_name.includes(pinCode);
+  const pinMatched =
+    Boolean(pinCode) && String(result.display_name || "").includes(pinCode);
 
   return {
     nameMatched,
     pinMatched,
-    matched: Boolean(nameMatched || pinMatched),
+    matched: Boolean(nameMatched),
   };
 }
 
-async function geocodeAddress(branch) {
-  const query = `${branch.name}, ${branch.address}, Maharashtra, India`;
+async function geocodeAtm(atm) {
+  const query = `${atm.name}, ${atm.address}, Maharashtra, India`;
 
   const params = new URLSearchParams({
     q: query,
@@ -76,10 +74,10 @@ async function geocodeAddress(branch) {
 
     const results = await response.json();
 
-    if (!results.length) {
+    if (!Array.isArray(results) || results.length === 0) {
       return {
-        id: branch.id,
-        name: branch.name,
+        id: atm.id,
+        name: atm.name,
         latitude: null,
         longitude: null,
         matchedAddress: null,
@@ -89,16 +87,16 @@ async function geocodeAddress(branch) {
     }
 
     const result = results[0];
-    const match = checkLocationMatch(branch, result);
+    const match = checkLocationMatch(atm, result);
 
-    // Do not put an unrelated search result on the map.
+    // Reject unrelated results instead of placing them on the map.
     if (!match.matched) {
       return {
-        id: branch.id,
-        name: branch.name,
+        id: atm.id,
+        name: atm.name,
         latitude: null,
         longitude: null,
-        matchedAddress: result.display_name,
+        matchedAddress: result.display_name || null,
         locationAccuracy: "needs-review",
         reason: "Result did not match the ATM name or PIN code",
         candidateLatitude: Number(result.lat),
@@ -107,11 +105,11 @@ async function geocodeAddress(branch) {
     }
 
     return {
-      id: branch.id,
-      name: branch.name,
+      id: atm.id,
+      name: atm.name,
       latitude: Number(result.lat),
       longitude: Number(result.lon),
-      matchedAddress: result.display_name,
+      matchedAddress: result.display_name || null,
       locationAccuracy: "approximate-needs-verification",
       matchType: match.nameMatched
         ? "ATM locality/name matched"
@@ -119,11 +117,11 @@ async function geocodeAddress(branch) {
       reason: "Search result is approximate and requires manual verification",
     };
   } catch (error) {
-    console.error(`Error geocoding ${branch.name}:`, error.message);
+    console.error(`Error geocoding ${atm.name}:`, error.message);
 
     return {
-      id: branch.id,
-      name: branch.name,
+      id: atm.id,
+      name: atm.name,
       latitude: null,
       longitude: null,
       matchedAddress: null,
@@ -134,16 +132,18 @@ async function geocodeAddress(branch) {
 }
 
 async function main() {
-  if (USER_AGENT.includes("YOUR_EMAIL")) {
-    console.error(
-      "\nPlease replace YOUR_EMAIL in the script with a valid contact email before running it.\n",
+  if (!Array.isArray(atms) || atms.length === 0) {
+    throw new Error(
+      "No ATM records found. Check that atmData.js exports a non-empty 'atms' array.",
     );
-    process.exit(1);
   }
 
-  if (!Array.isArray(branches) || branches.length === 0) {
-    console.error("No ATM records found in branchData.js.");
-    process.exit(1);
+  for (const [index, atm] of atms.entries()) {
+    if (atm.id === undefined || !atm.name || !atm.address) {
+      throw new Error(
+        `Invalid ATM record at index ${index}. Each record must contain id, name, and address.`,
+      );
+    }
   }
 
   await mkdir(OUTPUT_DIR, { recursive: true });
@@ -157,33 +157,32 @@ async function main() {
   console.log("\n======================================");
   console.log(" TDCC BANK - ATM GEOCODING");
   console.log("======================================");
-  console.log(`Total ATM records: ${branches.length}\n`);
+  console.log(`Total ATM records: ${atms.length}\n`);
 
-  for (let index = 0; index < branches.length; index++) {
-    const branch = branches[index];
+  for (let index = 0; index < atms.length; index += 1) {
+    const atm = atms[index];
 
-    console.log(`[${index + 1}/${branches.length}] Searching: ${branch.name}`);
+    console.log(`[${index + 1}/${atms.length}] Searching: ${atm.name}`);
 
-    const result = await geocodeAddress(branch);
-
+    const result = await geocodeAtm(atm);
     results.push(result);
 
     if (result.locationAccuracy === "approximate-needs-verification") {
-      matched++;
+      matched += 1;
       console.log(`  Approximate match: ${result.matchType}`);
     } else if (result.locationAccuracy === "error") {
-      errors++;
+      errors += 1;
       console.log(`  Error: ${result.reason}`);
     } else {
-      unmatched++;
+      unmatched += 1;
       console.log(`  Needs review: ${result.reason}`);
     }
 
-    // Save progress after every record.
+    // Save progress after every ATM record.
     await writeFile(OUTPUT_FILE, JSON.stringify(results, null, 2), "utf8");
 
-    // Respect Nominatim's maximum of one request per second.
-    if (index < branches.length - 1) {
+    // Respect Nominatim's public service request limit.
+    if (index < atms.length - 1) {
       await sleep(REQUEST_DELAY);
     }
   }
@@ -191,7 +190,7 @@ async function main() {
   const report = {
     generatedAt: new Date().toISOString(),
     provider: "OpenStreetMap Nominatim",
-    totalRecords: branches.length,
+    totalRecords: atms.length,
     approximateMatches: matched,
     unmatchedOrNeedsReview: unmatched,
     errors,
@@ -211,13 +210,15 @@ async function main() {
   console.log("\n======================================");
   console.log(" GEOCODING COMPLETED");
   console.log("======================================");
-  console.log(`Total records:             ${branches.length}`);
+  console.log(`Total records:             ${atms.length}`);
   console.log(`Approximate matches:       ${matched}`);
   console.log(`Unmatched / review needed: ${unmatched}`);
   console.log(`Errors:                    ${errors}`);
+
   console.log("\nGenerated files:");
   console.log(`1. ${OUTPUT_FILE}`);
   console.log(`2. ${REPORT_FILE}`);
+
   console.log("\nRemember to verify approximate coordinates manually.");
 }
 

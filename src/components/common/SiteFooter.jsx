@@ -244,7 +244,7 @@ function SiteFooter() {
 
             {/* Uniform DICGC logo and QR cards */}
             <div className="mt-5 grid grid-cols-2 gap-3">
-              <div className="flex h-[145px] w-full items-center justify-center rounded-xl border border-[#315B7E]/10 bg-white p-4 shadow-sm">
+              <div className="flex h-[115px] w-full items-center justify-center rounded-xl border border-[#315B7E]/10 bg-white p-1 shadow-sm">
                 <img
                   src={dicgcLogo}
                   alt="DICGC logo"
@@ -253,7 +253,7 @@ function SiteFooter() {
                 />
               </div>
 
-              <div className="flex h-[145px] w-full flex-col items-center justify-center gap-2 rounded-xl border border-[#315B7E]/10 bg-white p-3 shadow-sm">
+              <div className="flex h-[115px] w-full flex-col items-center justify-center gap-2 rounded-xl border border-[#315B7E]/10 bg-white p-1 shadow-sm">
                 <img
                   src={dicgcQrCode}
                   alt="QR code linking to the DICGC website"

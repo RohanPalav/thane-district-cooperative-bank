@@ -1,4 +1,3 @@
-
 export const atms = [
   {
     id: 1,
@@ -83,7 +82,8 @@ export const atms = [
   {
     id: 15,
     name: "Shivali Ext. Counter",
-    address: "AT – POST – SHIVALE, TAL – MURBAD, DIST – THANE. Pin Code-421101.",
+    address:
+      "AT – POST – SHIVALE, TAL – MURBAD, DIST – THANE. Pin Code-421101.",
   },
   {
     id: 16,

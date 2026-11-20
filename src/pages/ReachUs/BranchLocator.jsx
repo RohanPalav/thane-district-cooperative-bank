@@ -6,7 +6,6 @@ import {
   ExternalLink,
   Building2,
   Phone,
-  X,
   MapPinned,
 } from "lucide-react";
 
@@ -17,7 +16,7 @@ import geocodedBranches from "../../data/geocodedBranches.json";
 import BranchMap from "../../components/sections/BranchMap";
 
 function BranchLocator() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -81,19 +80,42 @@ function BranchLocator() {
         mapHeading: "Branch Locations",
       };
 
-  // Combine branch information with available map coordinates.
+  // Combine branch information with map coordinates
+  // and retrieve translated names when Marathi is selected.
   const branchRecords = useMemo(() => {
     const geocodedById = new Map(
       geocodedBranches.map((branch) => [branch.id, branch]),
     );
 
-    return branches.map((branch) => ({
-      ...branch,
-      ...(geocodedById.get(branch.id) || {}),
-    }));
-  }, []);
+    const translatedAddresses = t("branchAddresses");
 
-  // Filter branches using all available search fields.
+    return branches.map((branch) => {
+      const translatedName = t(`branchName${branch.id}`);
+
+      return {
+        ...branch,
+        ...(geocodedById.get(branch.id) || {}),
+
+        // Preserve original English information for searching.
+        originalName: branch.name,
+        originalAddress: branch.address,
+
+        // Translate branch name.
+        name:
+          isMarathi && translatedName !== `branchName${branch.id}`
+            ? translatedName
+            : branch.name,
+
+        // Translate address when Marathi is selected.
+        address:
+          isMarathi && Array.isArray(translatedAddresses)
+            ? translatedAddresses[branch.id - 1] || branch.address
+            : branch.address,
+      };
+    });
+  }, [isMarathi, t]);
+
+  // Filter branches using both original and translated information.
   const filteredBranches = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
 
@@ -103,7 +125,9 @@ function BranchLocator() {
       [
         branch.id,
         branch.name,
+        branch.originalName,
         branch.address,
+        branch.originalAddress,
         branch.phone,
         branch.ifsc,
         branch.branchCode,
@@ -131,7 +155,9 @@ function BranchLocator() {
       [
         branch.id,
         branch.name,
+        branch.originalName,
         branch.address,
+        branch.originalAddress,
         branch.phone,
         branch.ifsc,
         branch.branchCode,
@@ -252,17 +278,6 @@ function BranchLocator() {
                   placeholder={content.searchPlaceholder}
                   className="w-full bg-transparent text-sm font-medium text-[#263D55] outline-none placeholder:font-normal placeholder:text-[#8997A5] sm:text-base"
                 />
-
-                {/* {searchQuery && (
-                  <button
-                    type="button"
-                    onClick={handleClearSearch}
-                    aria-label={content.clearSearch}
-                    className="shrink-0 rounded-full p-1 text-[#52677C] transition-colors hover:bg-[#E5F3EA] hover:text-[#25845d]"
-                  >
-                    <X size={18} />
-                  </button>
-                )} */}
               </div>
             </div>
 
@@ -275,8 +290,10 @@ function BranchLocator() {
                 <p className="text-xs font-medium text-[#52677C]">
                   {content.showing}
                 </p>
+
                 <p className="text-lg font-bold text-[#173E70]">
                   {filteredBranches.length}
+
                   <span className="ml-1 text-sm font-medium text-[#52677C]">
                     {content.of} {branchRecords.length}
                   </span>
@@ -297,6 +314,7 @@ function BranchLocator() {
               <h2 className="text-xl font-semibold text-[#173E70] sm:text-2xl">
                 {content.mapHeading}
               </h2>
+
               <p className="mt-1 text-sm text-[#64788B]">{content.subtitle}</p>
             </div>
           </div>
@@ -323,6 +341,7 @@ function BranchLocator() {
               <h2 className="text-xl font-semibold text-[#173E70] sm:text-2xl">
                 {content.directory}
               </h2>
+
               <p className="mt-1 text-sm text-[#64788B]">
                 {content.showing} {filteredBranches.length} {content.branch}
               </p>
@@ -334,7 +353,6 @@ function BranchLocator() {
             onClick={handleClearSearch}
             className="inline-flex items-center gap-2 rounded-lg border border-[#D8E8DE] bg-white px-4 py-2.5 text-sm font-semibold text-[#25845d] transition-all duration-200 hover:border-[#25845d] hover:bg-[#EAF5EE]"
           >
-            <X size={16} />
             {content.allBranches}
           </button>
         </div>

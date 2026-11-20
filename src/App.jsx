@@ -30,7 +30,11 @@ import HousingLoan from "./pages/Loans/HousingLoan";
 import GoldLoan from "./pages/Loans/GoldLoan";
 import InterestRates from "./pages/Loans/InterestRates";
 
+import ReachUsHome from "./pages/ReachUs/ReachUsHome";
 import BranchLocator from "./pages/ReachUs/BranchLocator";
+import HeadOffice from "./pages/ReachUs/HeadOffice";
+import ContactUs from "./pages/ReachUs/ContactUs";
+import Awards from "./pages/ReachUs/Awards";
 
 import ServicesHome from "./pages/Services/ServicesHome";
 import DigitalBanking from "./pages/Services/DigitalBanking";
@@ -200,7 +204,17 @@ function AppContent() {
 
         {/* REACH US */}
 
+        <Route path="/reach-us" element={<ReachUsHome />} />
+
         <Route path="/reach-us/branches" element={<BranchLocator />} />
+
+        <Route path="/reach-us/head-office" element={<HeadOffice />} />
+
+        <Route path="/reach-us/contact-us" element={<ContactUs />} />
+
+        <Route path="/reach-us/contact" element={<ContactUs />} />
+
+        <Route path="/reach-us/awards" element={<Awards />} />
 
         <Route
           path="/reach-us/*"
