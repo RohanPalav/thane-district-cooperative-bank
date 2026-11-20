@@ -38,145 +38,38 @@ import prabhakarMhatre from "../../assets/board/staff/prabhakar-mhatre.jpg";
 import navnitPashte from "../../assets/board/staff/navnit-pashte.jpg";
 import prakashBhondiwale from "../../assets/board/staff/prakash-bhondiwale.jpg";
 
-// BOARD MEMBERS
-const chairman = {
-  name: "Mr. Arun Balu Patil",
-  designation: "Chairman",
-  image: arunBaluPatil,
-};
-
-const viceChairman = {
-  name: "Mrs. Bhagyashree Nilesh Bhoir",
-  designation: "Vice Chairman",
-  image: bhagyashreeNileshBhoir,
-};
-
+// DIRECTORS AND MANAGEMENT DATA
 const directors = [
-  {
-    name: "Mr. Kapil Moreshwar Patil",
-    image: kapilMoreshwarPatil,
-  },
-  {
-    name: "Mr. Baliram Sukur Jadhav",
-    image: baliramSukurJadhav,
-  },
-  {
-    name: "Mr. Amit Krushana Ghoda",
-    image: amitKrushanaGhoda,
-  },
-  {
-    name: "Mr. Sunil Chandrakant Bhusara",
-    image: sunilChandrakantBhusara,
-  },
-  {
-    name: "Mr. Nilesh Bhagwan Sambare",
-    image: nileshBhagwanSambare,
-  },
-  {
-    name: "Mr. Nivrutti Yashwant Ghushekar",
-    image: nivruttiYashwantGhushekar,
-  },
-  {
-    name: "Mrs. Neeta Rajendra Kambli",
-    image: neetaRajendraKambli,
-  },
-  {
-    name: "Mr. Dasu Kakad Radya",
-    image: dasuKakadRadya,
-  },
-  {
-    name: "Mr. Rambhaji Barku Jagtap",
-    image: rambhajiBarkuJagtap,
-  },
-  {
-    name: "Mr. Prakash Narayan Varkute",
-    image: prakashNarayanVarkute,
-  },
-  {
-    name: "Mrs. Smita Ravindra Ghodvinde",
-    image: smitaRavindraGhodvinde,
-  },
-  {
-    name: "Mrs. Jyoti Dilip Patekar",
-    image: jyotiDilipPatekar,
-  },
-  {
-    name: "Mr. Anil Madhavrao Gavad",
-    image: anilMadhavraoGavad,
-  },
-  {
-    name: "Mr. Jayesh Rajesh Patil",
-    image: jayeshRajeshPatil,
-  },
-  {
-    name: "Mr. Saurabh Subhash Pawar",
-    image: saurabhSubhashPawar,
-  },
-  {
-    name: "Mr. Vishal Bhau Kurhade",
-    image: vishalBhauKurhade,
-  },
-  {
-    name: "Mr. Swapnil Anil Mumbaikar",
-    image: swapnilAnilMumbaikar,
-  },
-  {
-    name: "Mr. Manish Rajan Patil",
-    image: manishRajanPatil,
-  },
-  {
-    name: "Mr. Aakash Babaji Patil",
-    image: aakashBabajiPatil,
-  },
+  { image: kapilMoreshwarPatil, nameKey: "aboutBoardDirector1Name" },
+  { image: baliramSukurJadhav, nameKey: "aboutBoardDirector2Name" },
+  { image: amitKrushanaGhoda, nameKey: "aboutBoardDirector3Name" },
+  { image: sunilChandrakantBhusara, nameKey: "aboutBoardDirector4Name" },
+  { image: nileshBhagwanSambare, nameKey: "aboutBoardDirector5Name" },
+  { image: nivruttiYashwantGhushekar, nameKey: "aboutBoardDirector6Name" },
+  { image: neetaRajendraKambli, nameKey: "aboutBoardDirector7Name" },
+  { image: dasuKakadRadya, nameKey: "aboutBoardDirector8Name" },
+  { image: rambhajiBarkuJagtap, nameKey: "aboutBoardDirector9Name" },
+  { image: prakashNarayanVarkute, nameKey: "aboutBoardDirector10Name" },
+  { image: smitaRavindraGhodvinde, nameKey: "aboutBoardDirector11Name" },
+  { image: jyotiDilipPatekar, nameKey: "aboutBoardDirector12Name" },
+  { image: anilMadhavraoGavad, nameKey: "aboutBoardDirector13Name" },
+  { image: jayeshRajeshPatil, nameKey: "aboutBoardDirector14Name" },
+  { image: saurabhSubhashPawar, nameKey: "aboutBoardDirector15Name" },
+  { image: vishalBhauKurhade, nameKey: "aboutBoardDirector16Name" },
+  { image: swapnilAnilMumbaikar, nameKey: "aboutBoardDirector17Name" },
+  { image: manishRajanPatil, nameKey: "aboutBoardDirector18Name" },
+  { image: aakashBabajiPatil, nameKey: "aboutBoardDirector19Name" },
 ];
 
-const ceo = {
-  name: "Shrikant Patare",
-  designation: "Chief Executive Officer",
-  image: shrikantPatare,
-};
-
 const deputyCEOs = [
-  {
-    name: "Santosh Mhatre",
-    designation: "Deputy CEO",
-    image: santoshMhatre,
-  },
-  {
-    name: "Rajendra J. Bhere",
-    designation: "Deputy CEO",
-    image: rajendraJBhere,
-  },
-  {
-    name: "Pramod Tare",
-    designation: "Deputy CEO",
-    image: pramodTare,
-  },
-  {
-    name: "Sanjay S. Patil",
-    designation: "Deputy CEO",
-    image: sanjaySPatil,
-  },
-  {
-    name: "Anand Bhoir",
-    designation: "Deputy CEO",
-    image: anandBhoir,
-  },
-  {
-    name: "Prabhakar Mhatre",
-    designation: "Deputy CEO",
-    image: prabhakarMhatre,
-  },
-  {
-    name: "Navnit Pashte",
-    designation: "Deputy CEO",
-    image: navnitPashte,
-  },
-  {
-    name: "Dr. Prakash Bhondiwale",
-    designation: "Deputy CEO",
-    image: prakashBhondiwale,
-  },
+  { image: santoshMhatre, nameKey: "aboutBoardDeputyCeo1Name" },
+  { image: rajendraJBhere, nameKey: "aboutBoardDeputyCeo2Name" },
+  { image: pramodTare, nameKey: "aboutBoardDeputyCeo3Name" },
+  { image: sanjaySPatil, nameKey: "aboutBoardDeputyCeo4Name" },
+  { image: anandBhoir, nameKey: "aboutBoardDeputyCeo5Name" },
+  { image: prabhakarMhatre, nameKey: "aboutBoardDeputyCeo6Name" },
+  { image: navnitPashte, nameKey: "aboutBoardDeputyCeo7Name" },
+  { image: prakashBhondiwale, nameKey: "aboutBoardDeputyCeo8Name" },
 ];
 
 // REUSABLE MEMBER CARD
@@ -196,13 +89,6 @@ function MemberCard({ member, featured = false }) {
           loading="lazy"
           className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
         />
-
-        {/* <img
-          src={member.image}
-          alt={member.name}
-          loading="lazy"
-          className="h-full w-full object-contain object-bottom transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-        /> */}
 
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#173E70]/[0.07] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
@@ -229,7 +115,13 @@ function MemberCard({ member, featured = false }) {
 }
 
 // REUSABLE SECTION HEADING
-function SectionHeading({ eyebrow, title, description, icon: Icon }) {
+function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  icon: Icon,
+  isMarathi,
+}) {
   return (
     <div className="mb-9">
       <div className="flex items-center gap-3">
@@ -238,7 +130,11 @@ function SectionHeading({ eyebrow, title, description, icon: Icon }) {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#25845d]">
+          <p
+            className={`text-xs font-semibold uppercase text-[#25845d] ${
+              isMarathi ? "tracking-normal" : "tracking-[0.14em]"
+            }`}
+          >
             {eyebrow}
           </p>
 
@@ -258,9 +154,42 @@ function SectionHeading({ eyebrow, title, description, icon: Icon }) {
 }
 
 function Board() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const isMarathi = language === "mr";
+
+  // CHAIRMAN AND VICE CHAIRMAN
+  const chairman = {
+    name: t("aboutBoardChairmanName"),
+    designation: t("aboutBoardChairmanDesignation"),
+    image: arunBaluPatil,
+  };
+
+  const viceChairman = {
+    name: t("aboutBoardViceChairmanName"),
+    designation: t("aboutBoardViceChairmanDesignation"),
+    image: bhagyashreeNileshBhoir,
+  };
+
+  // DIRECTORS
+  const translatedDirectors = directors.map((member) => ({
+    ...member,
+    name: t(member.nameKey),
+  }));
+
+  // CEO
+  const ceo = {
+    name: t("aboutBoardCeoName"),
+    designation: t("aboutBoardCeoDesignation"),
+    image: shrikantPatare,
+  };
+
+  // DEPUTY CEOS
+  const translatedDeputyCEOs = deputyCEOs.map((member) => ({
+    ...member,
+    name: t(member.nameKey),
+    designation: t("aboutBoardDeputyCeoDesignation"),
+  }));
 
   return (
     <main
@@ -294,19 +223,17 @@ function Board() {
               isMarathi ? "tracking-normal" : "tracking-[0.16em]"
             }`}
           >
-            {isMarathi ? "आमचे नेतृत्व" : "OUR LEADERSHIP"}
+            {t("aboutBoardEyebrow")}
           </p>
 
           <h1 className="text-4xl font-bold leading-tight text-[#173E70] sm:text-5xl lg:text-6xl">
-            {isMarathi ? "संचालक मंडळ" : "Board"}
+            {t("aboutBoardTitle")}
           </h1>
 
           <div className="mt-5 h-1 w-20 rounded-full bg-[#25845d]" />
 
           <p className="mt-6 max-w-3xl text-base font-medium leading-8 text-[#596879] sm:text-lg">
-            {isMarathi
-              ? "ठाणे जिल्हा मध्यवर्ती सहकारी बँकेचे संचालक मंडळ आणि वरिष्ठ व्यवस्थापन."
-              : "Meet the Board of Directors and senior management of The Thane District Central Co-operative Bank Ltd."}
+            {t("aboutBoardDescription")}
           </p>
         </div>
       </section>
@@ -315,21 +242,15 @@ function Board() {
 
       <section className="relative z-10 mx-auto max-w-[1200px] px-5 pb-16 sm:px-8">
         <SectionHeading
-          eyebrow={isMarathi ? "नेतृत्व" : "LEADERSHIP"}
-          title={
-            isMarathi ? "अध्यक्ष आणि उपाध्यक्ष" : "Chairman & Vice Chairman"
-          }
-          description={
-            isMarathi
-              ? "बँकेच्या संचालक मंडळाचे अध्यक्ष आणि उपाध्यक्ष."
-              : "The Chairman and Vice Chairman of the Bank."
-          }
+          eyebrow={t("aboutBoardLeadershipEyebrow")}
+          title={t("aboutBoardChairmanSection")}
+          description={t("aboutBoardChairmanDescription")}
           icon={Award}
+          isMarathi={isMarathi}
         />
 
         <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-7 sm:grid-cols-2">
           <MemberCard member={chairman} featured />
-
           <MemberCard member={viceChairman} featured />
         </div>
       </section>
@@ -338,19 +259,16 @@ function Board() {
 
       <section className="relative z-10 mx-auto max-w-[1200px] px-5 pb-16 sm:px-8 lg:pb-20">
         <SectionHeading
-          eyebrow={isMarathi ? "संचालक मंडळ" : "BOARD MEMBERS"}
-          title={isMarathi ? "संचालक" : "Directors"}
-          description={
-            isMarathi
-              ? "बँकेच्या संचालक मंडळातील सदस्य."
-              : "Members of the Bank's Board of Directors."
-          }
+          eyebrow={t("aboutBoardMembersEyebrow")}
+          title={t("aboutBoardDirectorsTitle")}
+          description={t("aboutBoardDirectorsDescription")}
           icon={Users}
+          isMarathi={isMarathi}
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {directors.map((member) => (
-            <MemberCard key={member.name} member={member} />
+          {translatedDirectors.map((member) => (
+            <MemberCard key={member.nameKey} member={member} />
           ))}
         </div>
       </section>
@@ -359,16 +277,11 @@ function Board() {
 
       <section className="relative z-10 mx-auto max-w-[1200px] px-5 pb-16 sm:px-8 lg:pb-20">
         <SectionHeading
-          eyebrow={isMarathi ? "व्यवस्थापन" : "BANK MANAGEMENT"}
-          title={
-            isMarathi ? "मुख्य कार्यकारी अधिकारी" : "Chief Executive Officer"
-          }
-          description={
-            isMarathi
-              ? "बँकेचे मुख्य कार्यकारी अधिकारी."
-              : "The Chief Executive Officer of the Bank."
-          }
+          eyebrow={t("aboutBoardManagementEyebrow")}
+          title={t("aboutBoardCeoTitle")}
+          description={t("aboutBoardCeoDescription")}
           icon={Building2}
+          isMarathi={isMarathi}
         />
 
         <div className="mx-auto max-w-[320px]">
@@ -380,23 +293,16 @@ function Board() {
 
       <section className="relative z-10 mx-auto max-w-[1200px] px-5 pb-20 sm:px-8">
         <SectionHeading
-          eyebrow={isMarathi ? "वरिष्ठ व्यवस्थापन" : "SENIOR MANAGEMENT"}
-          title={
-            isMarathi
-              ? "उप मुख्य कार्यकारी अधिकारी"
-              : "Deputy Chief Executive Officers"
-          }
-          description={
-            isMarathi
-              ? "बँकेच्या वरिष्ठ व्यवस्थापनातील उप मुख्य कार्यकारी अधिकारी."
-              : "Deputy Chief Executive Officers serving in the Bank's senior management."
-          }
+          eyebrow={t("aboutBoardSeniorManagementEyebrow")}
+          title={t("aboutBoardDeputyCeoTitle")}
+          description={t("aboutBoardDeputyCeoDescription")}
           icon={UserRound}
+          isMarathi={isMarathi}
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {deputyCEOs.map((member) => (
-            <MemberCard key={member.name} member={member} />
+          {translatedDeputyCEOs.map((member) => (
+            <MemberCard key={member.nameKey} member={member} />
           ))}
         </div>
       </section>

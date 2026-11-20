@@ -43,6 +43,8 @@ import PositivePay from "./pages/Services/PositivePay";
 import AboutHome from "./pages/About/AboutHome";
 import Board from "./pages/About/Board";
 import PhotoGallery from "./pages/About/PhotoGallery";
+import AboutServices from "./pages/About/AboutServices";
+
 import ImportantNotice from "./pages/CustomerCare/ImportantNotice";
 
 /* ============================================================
@@ -188,6 +190,8 @@ function AppContent() {
         <Route path="/about/board" element={<Board />} />
 
         <Route path="/about/photo-gallery" element={<PhotoGallery />} />
+
+        <Route path="/about/services" element={<AboutServices />} />
 
         <Route
           path="/about/*"

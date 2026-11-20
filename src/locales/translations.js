@@ -395,6 +395,161 @@ export const translations = {
       "UPI enables customers to make fund transfers and merchant payments through a unified digital payment platform.",
     digitalUPIDescription2:
       "It also supports scheduled peer-to-peer collect requests.",
+
+    // ABOUT US HOME PAGE
+
+    aboutHomeEyebrow: "ABOUT THE BANK",
+    aboutHomeTitle: "About Us",
+    aboutHomeIntroductionHeading: "A Legacy of Trust and Banking Excellence",
+    aboutHomeIntroduction:
+      "The Thane District Central Co-op. Bank Ltd., Thane is the Bank registered under Maharashtra Co-op. Societies Act 1960 and licensed to carry on the Banking business from Reserve Bank of India. From 7 branches in 1958, we have grown to a network of 91 branches all over Thane District and a customer base of more than 1 million. We serve the customers with all the Banking facilities like Demand Deposits, Time Deposits, Loans and Advances for various sectors and purposes.",
+    aboutHomeFinancialNote:
+      "The following financial figures are historical figures reported as on 31st March 2012.",
+    aboutHomeFinancialDetails:
+      "As on 31st March 2012, our deposits were Rs. 3464.57 Crores and our loans were Rs. 1662.08 Crores. With a profit of Rs. 29.10 Crores and working capital of Rs. 4082.69 Crores, we were marching ahead along with our esteemed customers.",
+    aboutHomeRecognitionEyebrow: "OUR RECOGNITION",
+    aboutHomeAchievementsHeading: "Awards & Achievements",
+    aboutHomeAchievementsDescription:
+      "Some of the recognitions and achievements highlighted by the Bank.",
+    aboutHomeAchievement1:
+      "“Late. Vaikunthabhai Mehta best District Co-op. Bank” award in Maharashtra State for the last six years in a row (2008, 2009, 2010, 2011, 2012).",
+    aboutHomeAchievement2:
+      "Best performance award for work of Self Help Group (100% Linkage) by NABARD for the last six years in a row.",
+    aboutHomeAchievement3:
+      "“Dr. Dilip Sathe Financial Health award” by Mumbai Marathi Newspaper Author Sangh, Mumbai for the year 2008.",
+    aboutHomeExploreEyebrow: "EXPLORE MORE",
+    aboutHomeExploreHeading: "Discover More About Our Bank",
+    aboutHomeExploreDescription:
+      "Learn about the people, moments and banking services that form an important part of our institution.",
+    aboutHomeBoardDescription:
+      "Explore information about the Board and the leadership of the Bank.",
+    aboutHomeBoardAction: "View Board",
+    aboutHomeGalleryDescription:
+      "Take a look at photographs and important moments associated with the Bank.",
+    aboutHomeGalleryAction: "View Gallery",
+    aboutHomeServicesDescription:
+      "Discover the various banking and net banking services offered by the Bank.",
+    aboutHomeServicesAction: "Explore Services",
+
+    // BOARD OF DIRECTORS PAGE
+
+    aboutBoardEyebrow: "OUR LEADERSHIP",
+    aboutBoardTitle: "Board",
+    aboutBoardDescription:
+      "Meet the Board of Directors and senior management of The Thane District Central Co-operative Bank Ltd.",
+    aboutBoardLeadershipEyebrow: "LEADERSHIP",
+    aboutBoardChairmanSection: "Chairman & Vice Chairman",
+    aboutBoardChairmanDescription:
+      "The Chairman and Vice Chairman of the Bank.",
+    aboutBoardMembersEyebrow: "BOARD MEMBERS",
+    aboutBoardDirectorsTitle: "Directors",
+    aboutBoardDirectorsDescription: "Members of the Bank's Board of Directors.",
+    aboutBoardManagementEyebrow: "BANK MANAGEMENT",
+    aboutBoardCeoTitle: "Chief Executive Officer",
+    aboutBoardCeoDescription: "The Chief Executive Officer of the Bank.",
+    aboutBoardSeniorManagementEyebrow: "SENIOR MANAGEMENT",
+    aboutBoardDeputyCeoTitle: "Deputy Chief Executive Officers",
+    aboutBoardDeputyCeoDescription:
+      "Deputy Chief Executive Officers serving in the Bank's senior management.",
+    aboutBoardChairmanDesignation: "Chairman",
+    aboutBoardViceChairmanDesignation: "Vice Chairman",
+    aboutBoardCeoDesignation: "Chief Executive Officer",
+    aboutBoardDeputyCeoDesignation: "Deputy CEO",
+
+    // PHOTO GALLERY PAGE
+
+    aboutGalleryEyebrow: "MOMENTS & MEMORIES",
+    aboutGalleryTitle: "Photo Gallery",
+    aboutGalleryDescription:
+      "A collection of memorable moments, events and activities associated with The Thane District Central Co-operative Bank Ltd.",
+    aboutGalleryHeading: "Our Gallery",
+    aboutGalleryGalleryDescription:
+      "Explore photographs capturing various events and activities of the Bank.",
+    aboutGalleryClose: "Close image viewer",
+    aboutGalleryPrevious: "Previous image",
+    aboutGalleryNext: "Next image",
+    aboutGalleryImage: "Photograph",
+    aboutGalleryView: "View photograph",
+    aboutGalleryKeyboardHint: "Use the arrow keys to navigate",
+
+    // ABOUT US SERVICES PAGE
+
+    aboutServicesEyebrow: "BANKING FACILITIES",
+    aboutServicesTitle: "Services",
+    aboutServicesDescription:
+      "Explore the various banking facilities and payment services offered by The Thane District Central Co-operative Bank Ltd.",
+    aboutServicesIFSC: "Please click here for IFSC code",
+
+    aboutServicesNEFT: "NEFT",
+    aboutServicesRTGS: "RTGS",
+    aboutServicesTransactionTimings: "Timings For Transaction For Customer",
+    aboutServicesNEFTWeekdays: "Monday to Friday: 9.00 am to 4.00 pm",
+    aboutServicesNEFTSaturday: "Saturday: 9.00 am to 12.00 pm",
+    aboutServicesRTGSWeekdays: "Monday to Friday: 9.00 am to 3.30 pm",
+    aboutServicesRTGSSaturday: "Saturday: 9.00 am to 1.00 pm",
+    aboutServicesWeeklyOff: "Weekly off Sunday",
+
+    aboutServicesECS: "ECS",
+    aboutServicesECSDescription:
+      "Electronic Clearing System (ECS) is an electronic method of fund transfer from one bank account to another. It is generally used for bulk transfers performed by institutions for making payments like dividend, interest, salary, pension, etc. ECS can also be used to pay bills and other charges such as payments to utility companies such as telephone, electricity, water, or for making equated monthly installments payments on loans as well as SIP investments. Our Bank provides this facility to all our customers.",
+
+    aboutServicesAadhaar: "Aadhaar",
+    aboutServicesAadhaarStepsHeading:
+      "3 Simple Steps for Instant Government Subsidy gain!",
+    aboutServicesAadhaarStep1: "Open an account with TDCC Bank",
+    aboutServicesAadhaarStep2: "Provide AADHAR card number",
+    aboutServicesAadhaarStep3: "Link your existing account with AADHAR card.",
+    aboutServicesAadhaarExistingCustomer:
+      "Or if you are already a TDCC Bank customer:",
+    aboutServicesAadhaarExistingStep1: "Provide AADHAR card number",
+    aboutServicesAadhaarExistingStep2:
+      "Link your existing account with AADHAR card",
+    aboutServicesAadhaarSubsidy:
+      "The Gas subsidy will be directly credited to your account!.",
+
+    aboutServicesRuPay: "Rupay Kisan Credit Card",
+    aboutServicesRuPayDescription:
+      "Our TDCC Bank offers RuPay KCC Credit Card and the Card would be accepted on over one lakh ATMs of NFS Members Banks in the Country and would be accepted on Point of Sale (POS) and Internet. The Bank also able to provide customers anytime, anywhere, payment systems services which are simple, easy to use, safe, secure, fast and also cost effective version with introduction of Rupay KCC Credit Card for farmer.",
+
+    aboutServicesUPI: "Unified Payment Interface (UPI)",
+    aboutServicesUPIDescription:
+      "Unified Payments Interface (UPI) is a system that powers multiple bank accounts into a single mobile application (of any participating bank), merging several banking features, seamless fund routing & merchant payments into one hood. It also caters to the “Peer to Peer” collect request which can be scheduled and paid as per requirement and convenience.",
+
+    // BOARD MEMBER NAMES
+
+    aboutBoardChairmanName: "Mr. Arun Balu Patil",
+    aboutBoardViceChairmanName: "Mrs. Bhagyashree Nilesh Bhoir",
+
+    aboutBoardDirector1Name: "Mr. Kapil Moreshwar Patil",
+    aboutBoardDirector2Name: "Mr. Baliram Sukur Jadhav",
+    aboutBoardDirector3Name: "Mr. Amit Krushana Ghoda",
+    aboutBoardDirector4Name: "Mr. Sunil Chandrakant Bhusara",
+    aboutBoardDirector5Name: "Mr. Nilesh Bhagwan Sambare",
+    aboutBoardDirector6Name: "Mr. Nivrutti Yashwant Ghushekar",
+    aboutBoardDirector7Name: "Mrs. Neeta Rajendra Kambli",
+    aboutBoardDirector8Name: "Mr. Dasu Kakad Radya",
+    aboutBoardDirector9Name: "Mr. Rambhaji Barku Jagtap",
+    aboutBoardDirector10Name: "Mr. Prakash Narayan Varkute",
+    aboutBoardDirector11Name: "Mrs. Smita Ravindra Ghodvinde",
+    aboutBoardDirector12Name: "Mrs. Jyoti Dilip Patekar",
+    aboutBoardDirector13Name: "Mr. Anil Madhavrao Gavad",
+    aboutBoardDirector14Name: "Mr. Jayesh Rajesh Patil",
+    aboutBoardDirector15Name: "Mr. Saurabh Subhash Pawar",
+    aboutBoardDirector16Name: "Mr. Vishal Bhau Kurhade",
+    aboutBoardDirector17Name: "Mr. Swapnil Anil Mumbaikar",
+    aboutBoardDirector18Name: "Mr. Manish Rajan Patil",
+    aboutBoardDirector19Name: "Mr. Aakash Babaji Patil",
+
+    aboutBoardCeoName: "Shrikant Patare",
+
+    aboutBoardDeputyCeo1Name: "Santosh Mhatre",
+    aboutBoardDeputyCeo2Name: "Rajendra J. Bhere",
+    aboutBoardDeputyCeo3Name: "Pramod Tare",
+    aboutBoardDeputyCeo4Name: "Sanjay S. Patil",
+    aboutBoardDeputyCeo5Name: "Anand Bhoir",
+    aboutBoardDeputyCeo6Name: "Prabhakar Mhatre",
+    aboutBoardDeputyCeo7Name: "Navnit Pashte",
+    aboutBoardDeputyCeo8Name: "Dr. Prakash Bhondiwale",
   },
 
   mr: {
@@ -789,5 +944,160 @@ export const translations = {
       "यूपीआयच्या माध्यमातून ग्राहकांना निधी हस्तांतरण आणि व्यापाऱ्यांना डिजिटल पेमेंट करता येते.",
     digitalUPIDescription2:
       "यामध्ये व्यक्ती-ते-व्यक्ती नियोजित कलेक्ट विनंत्यांची सुविधाही उपलब्ध आहे.",
+
+    // ABOUT US HOME PAGE
+
+    aboutHomeEyebrow: "बँकेविषयी",
+    aboutHomeTitle: "आमच्याविषयी",
+    aboutHomeIntroductionHeading: "विश्वास आणि बँकिंग सेवेचा वारसा",
+    aboutHomeIntroduction:
+      "ठाणे जिल्हा मध्यवर्ती सहकारी बँक लिमिटेड, ठाणे ही महाराष्ट्र सहकारी संस्था अधिनियम १९६० अंतर्गत नोंदणीकृत असून भारतीय रिझर्व्ह बँकेकडून बँकिंग व्यवसाय करण्यासाठी परवानाधारक आहे. १९५८ मध्ये ७ शाखांपासून सुरू झालेला बँकेचा प्रवास आज संपूर्ण ठाणे जिल्ह्यातील ९१ शाखांच्या जाळ्यापर्यंत आणि १० लाखांहून अधिक ग्राहकांपर्यंत पोहोचला आहे. बँक आपल्या ग्राहकांना मागणी ठेवी, मुदत ठेवी, विविध क्षेत्रांसाठी कर्जे आणि आगाऊ रक्कम यांसारख्या बँकिंग सुविधा पुरवते.",
+    aboutHomeFinancialNote:
+      "खालील आर्थिक आकडेवारी ३१ मार्च २०१२ रोजी नोंदवलेल्या ऐतिहासिक आकडेवारीवर आधारित आहे.",
+    aboutHomeFinancialDetails:
+      "३१ मार्च २०१२ रोजी बँकेच्या ठेवी रु. ३४६४.५७ कोटी आणि कर्जे रु. १६६२.०८ कोटी होती. रु. २९.१० कोटी नफा आणि रु. ४०८२.६९ कोटी खेळते भांडवलासह बँकेने आपल्या ग्राहकांच्या सहकार्याने प्रगती केली.",
+    aboutHomeRecognitionEyebrow: "आमचे यश",
+    aboutHomeAchievementsHeading: "पुरस्कार आणि उपलब्धी",
+    aboutHomeAchievementsDescription:
+      "बँकेने नमूद केलेले काही महत्त्वाचे पुरस्कार आणि सन्मान.",
+    aboutHomeAchievement1:
+      "महाराष्ट्र राज्यात सलग सहा वर्षे (२००८, २००९, २०१०, २०११, २०१२) “कै. वैकुंठभाई मेहता उत्कृष्ट जिल्हा सहकारी बँक” पुरस्कार.",
+    aboutHomeAchievement2:
+      "नाबार्डतर्फे स्वयं-सहायता गटांच्या (१००% लिंकेज) कार्यासाठी सलग सहा वर्षे उत्कृष्ट कामगिरी पुरस्कार.",
+    aboutHomeAchievement3:
+      "मुंबई मराठी वृत्तपत्र लेखक संघ, मुंबई यांच्यातर्फे २००८ सालासाठी “डॉ. दिलीप साठे फायनान्शियल हेल्थ पुरस्कार”.",
+    aboutHomeExploreEyebrow: "अधिक माहिती",
+    aboutHomeExploreHeading: "आमच्या बँकेविषयी अधिक जाणून घ्या",
+    aboutHomeExploreDescription:
+      "बँकेचे संचालक मंडळ, छायाचित्रे आणि बँकिंग सेवांविषयी अधिक माहिती जाणून घ्या.",
+    aboutHomeBoardDescription:
+      "बँकेचे संचालक मंडळ आणि नेतृत्व यांची माहिती जाणून घ्या.",
+    aboutHomeBoardAction: "मंडळ पहा",
+    aboutHomeGalleryDescription:
+      "बँकेशी संबंधित छायाचित्रे आणि महत्त्वाचे क्षण पाहा.",
+    aboutHomeGalleryAction: "छायाचित्रे पहा",
+    aboutHomeServicesDescription:
+      "बँकेच्या विविध बँकिंग आणि नेट बँकिंग सेवांची माहिती घ्या.",
+    aboutHomeServicesAction: "सेवा पहा",
+
+    // BOARD OF DIRECTORS PAGE
+
+    aboutBoardEyebrow: "आमचे नेतृत्व",
+    aboutBoardTitle: "संचालक मंडळ",
+    aboutBoardDescription:
+      "ठाणे जिल्हा मध्यवर्ती सहकारी बँकेचे संचालक मंडळ आणि वरिष्ठ व्यवस्थापन.",
+    aboutBoardLeadershipEyebrow: "नेतृत्व",
+    aboutBoardChairmanSection: "अध्यक्ष आणि उपाध्यक्ष",
+    aboutBoardChairmanDescription:
+      "बँकेच्या संचालक मंडळाचे अध्यक्ष आणि उपाध्यक्ष.",
+    aboutBoardMembersEyebrow: "संचालक मंडळ",
+    aboutBoardDirectorsTitle: "संचालक",
+    aboutBoardDirectorsDescription: "बँकेच्या संचालक मंडळातील सदस्य.",
+    aboutBoardManagementEyebrow: "व्यवस्थापन",
+    aboutBoardCeoTitle: "मुख्य कार्यकारी अधिकारी",
+    aboutBoardCeoDescription: "बँकेचे मुख्य कार्यकारी अधिकारी.",
+    aboutBoardSeniorManagementEyebrow: "वरिष्ठ व्यवस्थापन",
+    aboutBoardDeputyCeoTitle: "उप मुख्य कार्यकारी अधिकारी",
+    aboutBoardDeputyCeoDescription:
+      "बँकेच्या वरिष्ठ व्यवस्थापनातील उप मुख्य कार्यकारी अधिकारी.",
+    aboutBoardChairmanDesignation: "अध्यक्ष",
+    aboutBoardViceChairmanDesignation: "उपाध्यक्ष",
+    aboutBoardCeoDesignation: "मुख्य कार्यकारी अधिकारी",
+    aboutBoardDeputyCeoDesignation: "उप मुख्य कार्यकारी अधिकारी",
+
+    // PHOTO GALLERY PAGE
+
+    aboutGalleryEyebrow: "आठवणी आणि क्षणचित्रे",
+    aboutGalleryTitle: "छायाचित्र दालन",
+    aboutGalleryDescription:
+      "ठाणे जिल्हा मध्यवर्ती सहकारी बँकेशी संबंधित विविध कार्यक्रम, उपक्रम आणि संस्मरणीय क्षणांचा संग्रह.",
+    aboutGalleryHeading: "आमचे छायाचित्र दालन",
+    aboutGalleryGalleryDescription:
+      "बँकेच्या विविध कार्यक्रमांची आणि उपक्रमांची छायाचित्रे पाहा.",
+    aboutGalleryClose: "छायाचित्र बंद करा",
+    aboutGalleryPrevious: "मागील छायाचित्र",
+    aboutGalleryNext: "पुढील छायाचित्र",
+    aboutGalleryImage: "छायाचित्र",
+    aboutGalleryView: "छायाचित्र पहा",
+    aboutGalleryKeyboardHint: "मागील आणि पुढील छायाचित्रासाठी बाण वापरा",
+
+    // ABOUT US SERVICES PAGE
+
+    aboutServicesEyebrow: "बँकिंग सुविधा",
+    aboutServicesTitle: "सेवा",
+    aboutServicesDescription:
+      "ठाणे जिल्हा मध्यवर्ती सहकारी बँकेद्वारे उपलब्ध करून दिलेल्या विविध बँकिंग आणि पेमेंट सुविधांची माहिती जाणून घ्या.",
+    aboutServicesIFSC: "आयएफएससी कोडसाठी येथे क्लिक करा",
+
+    aboutServicesNEFT: "NEFT",
+    aboutServicesRTGS: "RTGS",
+    aboutServicesTransactionTimings: "ग्राहकांसाठी व्यवहाराची वेळ",
+    aboutServicesNEFTWeekdays: "सोमवार ते शुक्रवार: सकाळी ९.०० ते दुपारी ४.००",
+    aboutServicesNEFTSaturday: "शनिवार: सकाळी ९.०० ते दुपारी १२.००",
+    aboutServicesRTGSWeekdays: "सोमवार ते शुक्रवार: सकाळी ९.०० ते दुपारी ३.३०",
+    aboutServicesRTGSSaturday: "शनिवार: सकाळी ९.०० ते दुपारी १.००",
+    aboutServicesWeeklyOff: "साप्ताहिक सुट्टी: रविवार",
+
+    aboutServicesECS: "ECS",
+    aboutServicesECSDescription:
+      "इलेक्ट्रॉनिक क्लिअरिंग सिस्टीम (ECS) ही एका बँक खात्यातून दुसऱ्या बँक खात्यात निधी हस्तांतरित करण्याची इलेक्ट्रॉनिक पद्धत आहे. संस्थांद्वारे लाभांश, व्याज, पगार, पेन्शन इत्यादींचे मोठ्या प्रमाणावर वितरण करण्यासाठी या सुविधेचा वापर केला जातो. वीज, टेलिफोन आणि पाणी यांसारखी उपयोगिता देयके तसेच कर्जाचे हप्ते आणि SIP गुंतवणुकीसाठीही ECS वापरता येते. आमची बँक सर्व ग्राहकांना ही सुविधा उपलब्ध करून देते.",
+
+    aboutServicesAadhaar: "आधार",
+    aboutServicesAadhaarStepsHeading:
+      "शासकीय अनुदान मिळविण्यासाठी ३ सोप्या पायऱ्या!",
+    aboutServicesAadhaarStep1: "TDCC बँकेत खाते उघडा",
+    aboutServicesAadhaarStep2: "आधार कार्ड क्रमांक द्या",
+    aboutServicesAadhaarStep3: "आपले विद्यमान खाते आधार कार्डशी संलग्न करा.",
+    aboutServicesAadhaarExistingCustomer:
+      "आपण आधीपासून TDCC बँकेचे ग्राहक असल्यास:",
+    aboutServicesAadhaarExistingStep1: "आधार कार्ड क्रमांक द्या",
+    aboutServicesAadhaarExistingStep2:
+      "आपले विद्यमान खाते आधार कार्डशी संलग्न करा",
+    aboutServicesAadhaarSubsidy:
+      "गॅस अनुदानाची रक्कम थेट आपल्या खात्यात जमा केली जाईल.",
+
+    aboutServicesRuPay: "रुपे शेतकरी क्रेडिट कार्ड",
+
+    aboutServicesRuPayDescription:
+      "आमची TDCC बँक रुपे शेतकरी क्रेडिट कार्ड सुविधा उपलब्ध करून देते. हे कार्ड देशातील एनएफएस सदस्य बँकांच्या एक लाखाहून अधिक एटीएम केंद्रांवर तसेच विक्री केंद्रांवर (POS) आणि इंटरनेटवर स्वीकारले जाते. शेतकऱ्यांसाठी या कार्डच्या माध्यमातून बँक सोप्या, सुरक्षित, जलद आणि किफायतशीर पेमेंट सुविधा उपलब्ध करून देते.",
+
+    aboutServicesUPI: "एकात्मिक भुगतान प्रणाली (UPI)",
+    aboutServicesUPIDescription:
+      "एकात्मिक भुगतान प्रणाली (UPI) ही एक अशी प्रणाली आहे जी विविध बँक खात्यांना एका मोबाईल अनुप्रयोगाशी जोडते. यामध्ये अनेक बँकिंग सुविधा, सुलभ निधी हस्तांतरण आणि व्यापारी पेमेंट सुविधा एकाच ठिकाणी उपलब्ध होतात. तसेच व्यक्ती-ते-व्यक्ती (Peer to Peer) पैसे मागणीची सुविधा उपलब्ध असून, आवश्यकतेनुसार आणि सोयीनुसार तिचे वेळापत्रक ठरवून पेमेंट करता येते.",
+    // BOARD MEMBER NAMES
+
+    aboutBoardChairmanName: "श्री. अरुण बाळू पाटील",
+    aboutBoardViceChairmanName: "श्रीमती भाग्यश्री निलेश भोईर",
+
+    aboutBoardDirector1Name: "श्री. कपिल मोरेश्वर पाटील",
+    aboutBoardDirector2Name: "श्री. बळीराम सुकूर जाधव",
+    aboutBoardDirector3Name: "श्री. अमित कृष्णा घोडा",
+    aboutBoardDirector4Name: "श्री. सुनील चंद्रकांत भुसारा",
+    aboutBoardDirector5Name: "श्री. निलेश भगवान सांबरे",
+    aboutBoardDirector6Name: "श्री. निवृत्ती यशवंत घुसेकर",
+    aboutBoardDirector7Name: "श्रीमती नीता राजेंद्र कांबळी",
+    aboutBoardDirector8Name: "श्री. दासू काकड राड्या",
+    aboutBoardDirector9Name: "श्री. रामभाऊ बारकू जगताप",
+    aboutBoardDirector10Name: "श्री. प्रकाश नारायण वरकुटे",
+    aboutBoardDirector11Name: "श्रीमती स्मिता रविंद्र घोडविंदे",
+    aboutBoardDirector12Name: "श्रीमती ज्योती दिलीप पाटेकर",
+    aboutBoardDirector13Name: "श्री. अनिल माधवराव गावड",
+    aboutBoardDirector14Name: "श्री. जयेश राजेश पाटील",
+    aboutBoardDirector15Name: "श्री. सौरभ सुभाष पवार",
+    aboutBoardDirector16Name: "श्री. विशाल भाऊ कुर्‍हाडे",
+    aboutBoardDirector17Name: "श्री. स्वप्निल अनिल मुंबईकर",
+    aboutBoardDirector18Name: "श्री. मनीष राजन पाटील",
+    aboutBoardDirector19Name: "श्री. आकाश बाबाजी पाटील",
+
+    aboutBoardCeoName: "श्रीकांत पाटरे",
+
+    aboutBoardDeputyCeo1Name: "संतोष म्हात्रे",
+    aboutBoardDeputyCeo2Name: "राजेंद्र जे. भेरे",
+    aboutBoardDeputyCeo3Name: "प्रमोद तरे",
+    aboutBoardDeputyCeo4Name: "संजय एस. पाटील",
+    aboutBoardDeputyCeo5Name: "आनंद भोईर",
+    aboutBoardDeputyCeo6Name: "प्रभाकर म्हात्रे",
+    aboutBoardDeputyCeo7Name: "नवनीत पाष्टे",
+    aboutBoardDeputyCeo8Name: "डॉ. प्रकाश भोंडिवले",
   },
 };

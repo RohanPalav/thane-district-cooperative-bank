@@ -37,47 +37,13 @@ const galleryImages = [
 ];
 
 function PhotoGallery() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const isMarathi = language === "mr";
 
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const isLightboxOpen = selectedIndex !== null;
-
-  const content = {
-    en: {
-      eyebrow: "MOMENTS & MEMORIES",
-      title: "Photo Gallery",
-      description:
-        "A collection of memorable moments, events and activities associated with The Thane District Central Co-operative Bank Ltd.",
-      galleryHeading: "Our Gallery",
-      galleryDescription:
-        "Explore photographs capturing various events and activities of the Bank.",
-      close: "Close image viewer",
-      previous: "Previous image",
-      next: "Next image",
-      image: "Photograph",
-      view: "View photograph",
-    },
-
-    mr: {
-      eyebrow: "आठवणी आणि क्षणचित्रे",
-      title: "छायाचित्र दालन",
-      description:
-        "ठाणे जिल्हा मध्यवर्ती सहकारी बँकेशी संबंधित विविध कार्यक्रम, उपक्रम आणि संस्मरणीय क्षणांचा संग्रह.",
-      galleryHeading: "आमचे छायाचित्र दालन",
-      galleryDescription:
-        "बँकेच्या विविध कार्यक्रमांची आणि उपक्रमांची छायाचित्रे पाहा.",
-      close: "छायाचित्र बंद करा",
-      previous: "मागील छायाचित्र",
-      next: "पुढील छायाचित्र",
-      image: "छायाचित्र",
-      view: "छायाचित्र पहा",
-    },
-  };
-
-  const text = content[isMarathi ? "mr" : "en"];
 
   // OPEN THE SELECTED IMAGE
   const openLightbox = (index) => {
@@ -162,17 +128,17 @@ function PhotoGallery() {
               isMarathi ? "tracking-normal" : "tracking-[0.16em]"
             }`}
           >
-            {text.eyebrow}
+            {t("aboutGalleryEyebrow")}
           </p>
 
           <h1 className="text-4xl font-bold leading-tight text-[#173E70] sm:text-5xl lg:text-6xl">
-            {text.title}
+            {t("aboutGalleryTitle")}
           </h1>
 
           <div className="mt-5 h-1 w-20 rounded-full bg-[#25845d]" />
 
           <p className="mt-6 max-w-3xl text-base font-medium leading-8 text-[#596879] sm:text-lg">
-            {text.description}
+            {t("aboutGalleryDescription")}
           </p>
         </div>
       </section>
@@ -188,13 +154,13 @@ function PhotoGallery() {
 
             <div>
               <h2 className="text-2xl font-bold text-[#173E70] sm:text-3xl">
-                {text.galleryHeading}
+                {t("aboutGalleryHeading")}
               </h2>
             </div>
           </div>
 
           <p className="mt-4 max-w-[760px] text-sm font-medium leading-7 text-[#596879] sm:text-base">
-            {text.galleryDescription}
+            {t("aboutGalleryGalleryDescription")}
           </p>
         </div>
 
@@ -206,15 +172,15 @@ function PhotoGallery() {
               key={index}
               type="button"
               onClick={() => openLightbox(index)}
-              aria-label={`${text.view} ${index + 1}`}
-              className="group relative block w-full overflow-hidden rounded-2xl border border-[#E6ECE8] bg-white p-1.5 text-left shadow-[0_5px_18px_rgba(23,62,112,0.045)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-[#C6DCCF] hover:shadow-[0_16px_30px_rgba(23,62,112,0.14)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25845d] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] xl:w-[calc((100%-4.5rem)/4)]"
+              aria-label={`${t("aboutGalleryView")} ${index + 1}`}
+              className="group relative block w-full overflow-hidden rounded-2xl border-[0.5px] border-[#E6ECE8] bg-white p-1.5 text-left shadow-[0_5px_18px_rgba(23,62,112,0.045)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-[#C6DCCF] hover:shadow-[0_16px_30px_rgba(23,62,112,0.14)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25845d] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] xl:w-[calc((100%-4.5rem)/4)]"
             >
               {/* FIXED IMAGE AREA */}
 
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[#EDF2EF]">
                 <img
                   src={image}
-                  alt={`${text.image} ${index + 1}`}
+                  alt={`${t("aboutGalleryImage")} ${index + 1}`}
                   loading="lazy"
                   className="block h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.035]"
                 />
@@ -239,7 +205,7 @@ function PhotoGallery() {
           className="fixed inset-0 z-[100] flex items-center justify-center bg-[#081525]/95 p-4 backdrop-blur-sm sm:p-8"
           role="dialog"
           aria-modal="true"
-          aria-label={text.image}
+          aria-label={t("aboutGalleryImage")}
           onClick={closeLightbox}
         >
           {/* CLOSE BUTTON */}
@@ -247,7 +213,7 @@ function PhotoGallery() {
           <button
             type="button"
             onClick={closeLightbox}
-            aria-label={text.close}
+            aria-label={t("aboutGalleryClose")}
             className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:rotate-90 hover:bg-white/20 sm:right-7 sm:top-7"
           >
             <X size={23} />
@@ -267,7 +233,7 @@ function PhotoGallery() {
               event.stopPropagation();
               showPrevious();
             }}
-            aria-label={text.previous}
+            aria-label={t("aboutGalleryPrevious")}
             className="absolute left-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:scale-110 hover:bg-white/20 sm:left-6 sm:h-14 sm:w-14"
           >
             <ChevronLeft size={30} />
@@ -282,7 +248,7 @@ function PhotoGallery() {
             <img
               key={selectedIndex}
               src={galleryImages[selectedIndex]}
-              alt={`${text.image} ${selectedIndex + 1}`}
+              alt={`${t("aboutGalleryImage")} ${selectedIndex + 1}`}
               className="max-h-full max-w-full rounded-lg object-contain shadow-[0_15px_60px_rgba(0,0,0,0.35)]"
             />
           </div>
@@ -295,18 +261,16 @@ function PhotoGallery() {
               event.stopPropagation();
               showNext();
             }}
-            aria-label={text.next}
+            aria-label={t("aboutGalleryNext")}
             className="absolute right-2 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:scale-110 hover:bg-white/20 sm:right-6 sm:h-14 sm:w-14"
           >
             <ChevronRight size={30} />
           </button>
 
-          {/* BOTTOM IMAGE COUNTER */}
+          {/* BOTTOM KEYBOARD HINT */}
 
           <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-xs font-medium tracking-wide text-white/65">
-            {isMarathi
-              ? "मागील आणि पुढील छायाचित्रासाठी बाण वापरा"
-              : "Use the arrow keys to navigate"}
+            {t("aboutGalleryKeyboardHint")}
           </div>
         </div>
       )}
