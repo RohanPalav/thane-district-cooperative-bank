@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap");
+
 @import "tailwindcss";
 
 /* =========================================
@@ -172,4 +174,19 @@ html[lang="mr"] .welcome-section *,
 html[lang="mr"] .quick-links-section *,
 html[lang="mr"] .leadership-section * {
   letter-spacing: normal;
+}
+
+/* =========================================
+   MARATHI TYPOGRAPHY
+   ========================================= */
+
+html[lang="mr"] body {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  letter-spacing: normal;
+  font-synthesis: none;
+}
+
+html[lang="mr"] body * {
+  letter-spacing: normal;
+  font-kerning: normal;
 }

@@ -20,37 +20,25 @@ const depositFacilities = [
     key: "savingsAccount",
     descriptionKey: "savingsCardDescription",
     path: "/deposit/savings-account",
-    image: "/images/deposits/savings_account.png",
-    imageAlt: "Savings account illustration",
-    background: "bg-white",
-    imageScale: "scale-100 group-hover:scale-105",
+    Icon: PiggyBank,
   },
   {
     key: "currentAccount",
     descriptionKey: "currentCardDescription",
     path: "/deposit/current-account",
-    image: "/images/deposits/current_account.png",
-    imageAlt: "Current account illustration",
-    background: "bg-white",
-    imageScale: "scale-[0.78] group-hover:scale-[0.82]",
+    Icon: Wallet,
   },
   {
     key: "recurringAccount",
     descriptionKey: "recurringCardDescription",
     path: "/deposit/recurring-account",
-    image: "/images/deposits/recurring_deposit.png",
-    imageAlt: "Recurring deposit illustration",
-    background: "bg-white",
-    imageScale: "scale-[0.78] group-hover:scale-[0.82]",
+    Icon: CalendarDays,
   },
   {
     key: "termDeposit",
     descriptionKey: "termCardDescription",
     path: "/deposit/term-deposit",
-    image: "/images/deposits/term_deposit.png",
-    imageAlt: "Term deposit illustration",
-    background: "bg-white",
-    imageScale: "scale-[0.78] group-hover:scale-[0.82]",
+    Icon: Landmark,
   },
 ];
 
@@ -137,21 +125,25 @@ function DepositHome() {
 
   return (
     <main
+      lang={isMarathi ? "mr" : "en"}
       className="relative min-h-screen overflow-hidden"
       style={{
+        fontFamily: isMarathi
+          ? '"Nirmala UI", "Noto Sans Devanagari", "Mangal", sans-serif'
+          : '"Poppins", sans-serif',
         background: `
-      radial-gradient(
-        ellipse at 8% 10%,
-        rgba(229, 246, 238, 0.95) 0%,
-        rgba(229, 246, 238, 0) 48%
-      ),
-      radial-gradient(
-        ellipse at 92% 90%,
-        rgba(139, 191, 247, 0.13) 0%,
-        rgba(139, 191, 247, 0) 45%
-      ),
-      linear-gradient(120deg, #fffce3 0%, #f7fbf4 48%, #edf6f2 100%)
-    `,
+          radial-gradient(
+            ellipse at 8% 10%,
+            rgba(229, 246, 238, 0.95) 0%,
+            rgba(229, 246, 238, 0) 48%
+          ),
+          radial-gradient(
+            ellipse at 92% 90%,
+            rgba(139, 191, 247, 0.13) 0%,
+            rgba(139, 191, 247, 0) 45%
+          ),
+          linear-gradient(120deg, #fffce3 0%, #f7fbf4 48%, #edf6f2 100%)
+        `,
         backgroundAttachment: "fixed",
       }}
     >
@@ -286,32 +278,30 @@ function DepositHome() {
           {/* FOUR FACILITY CARDS */}
 
           <div className="mx-auto mt-10 grid max-w-[1240px] grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {depositFacilities.map((facility) => (
+            {depositFacilities.map(({ key, descriptionKey, path, Icon }) => (
               <Link
-                key={facility.key}
-                to={facility.path}
-                className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#E7ECE9] bg-white/90 opacity-100 shadow-[0_5px_18px_rgba(23,62,112,0.045)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#C6DCCF] hover:opacity-[0.97] hover:shadow-[0_16px_30px_rgba(23,62,112,0.10)]"
+                key={key}
+                to={path}
+                className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#E7ECE9] bg-white/90 shadow-[0_5px_18px_rgba(23,62,112,0.045)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#C6DCCF] hover:shadow-[0_16px_30px_rgba(23,62,112,0.10)]"
               >
-                {/* ILLUSTRATION AREA */}
+                {/* FACILITY ICON - MATCHES LOAN HOME CARDS */}
 
-                <div
-                  className={`relative flex h-[185px] items-center justify-center overflow-hidden sm:h-[195px] ${facility.background}`}
-                >
-                  <div className="pointer-events-none absolute h-36 w-36 rounded-full border border-white/60 transition-transform duration-700 group-hover:scale-110" />
+                <div className="relative flex h-[190px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F3F8F4] to-[#EDF3FA] sm:h-[210px]">
+                  <div className="pointer-events-none absolute h-36 w-36 rounded-full border border-[#25845d]/10 transition-transform duration-700 group-hover:scale-110" />
 
-                  <img
-                    src={facility.image}
-                    alt={facility.imageAlt}
-                    className={`relative z-10 h-full w-full object-contain p-3 transition-transform duration-700 ease-out ${facility.imageScale}`}
-                  />
+                  <div className="pointer-events-none absolute h-28 w-28 rounded-full bg-[#25845d]/[0.06] transition-transform duration-700 group-hover:scale-125" />
+
+                  <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-2xl border border-white/80 bg-white/90 text-[#25845d] shadow-[0_8px_25px_rgba(23,62,112,0.08)] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#25845d] group-hover:text-white">
+                    <Icon size={48} strokeWidth={1.5} />
+                  </div>
                 </div>
 
                 {/* CARD INFORMATION */}
 
-                <div className="flex flex-1 flex-col p-4">
+                <div className="flex flex-1 flex-col p-5">
                   <div className="flex items-start justify-between gap-2">
                     <h3 className="text-lg font-bold leading-snug text-[#173E70] transition-colors duration-300 group-hover:text-[#25845d]">
-                      {t(facility.key)}
+                      {t(key)}
                     </h3>
 
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#EDF5F0] text-[#25845d] transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#25845d] group-hover:text-white">
@@ -320,7 +310,7 @@ function DepositHome() {
                   </div>
 
                   <p className="mt-2 flex-1 text-sm font-medium leading-6 text-[#596879]">
-                    {t(facility.descriptionKey)}
+                    {t(descriptionKey)}
                   </p>
 
                   <div className="mt-3 flex items-center gap-2 text-sm font-semibold text-[#25845d]">

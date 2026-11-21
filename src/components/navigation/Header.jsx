@@ -319,10 +319,20 @@ function Header() {
                     }
                   }}
                 >
-                  <Link
+                  {/* <Link
                     to={item.path}
                     onClick={closeMenus}
                     className="flex items-center justify-center whitespace-nowrap px-0.5 py-3 text-sm font-semibold text-[#263238] transition-all duration-200 hover:scale-[1.05] hover:text-[#15965A] focus-visible:scale-[1.05] focus-visible:text-[#15965A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#15965A] group-hover:scale-[1.05] group-hover:text-[#15965A]"
+                  >
+                    {t(item.key)}
+                  </Link> */}
+
+                  <Link
+                    to={item.path}
+                    onClick={closeMenus}
+                    // className="flex items-center justify-center whitespace-nowrap rounded-full px-2.5 py-2.5 text-base font-semibold text-[#263238] transition-all duration-200 ease-in-out hover:scale-[1.03] hover:bg-[#25845d] hover:text-white hover:shadow-md focus-visible:scale-[1.03] focus-visible:bg-[#25845d] focus-visible:text-white focus-visible:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25845d] group-hover:scale-[1.03] group-hover:bg-[#25845d] group-hover:text-white group-hover:shadow-md"
+                    // className="flex items-center justify-center whitespace-nowrap px-3 py-2.5 text-base font-semibold text-[#263238] transition-all duration-300 ease-in-out hover:[text-shadow:0_0_5px_rgba(157,185,220,0.85),0_0_12px_rgba(157,185,220,0.65),0_0_22px_rgba(157,185,220,0.4)] focus-visible:[text-shadow:0_0_5px_rgba(157,185,220,0.85),0_0_12px_rgba(157,185,220,0.65),0_0_22px_rgba(157,185,220,0.4)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9DB9DC] group-hover:[text-shadow:0_0_5px_rgba(157,185,220,0.85),0_0_12px_rgba(157,185,220,0.65),0_0_22px_rgba(157,185,220,0.4)]"
+                    className="flex items-center justify-center whitespace-nowrap px-3 py-2.5 text-base font-semibold text-[#263238] transition-all duration-300 ease-in-out hover:[text-shadow:0_0_8px_rgba(157,185,220,0.85),0_0_18px_rgba(157,185,220,0.65),0_0_32px_rgba(157,185,220,0.4)] focus-visible:[text-shadow:0_0_8px_rgba(157,185,220,0.85),0_0_18px_rgba(157,185,220,0.65),0_0_32px_rgba(157,185,220,0.4)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9DB9DC] group-hover:[text-shadow:0_0_8px_rgba(157,185,220,0.85),0_0_18px_rgba(157,185,220,0.65),0_0_32px_rgba(157,185,220,0.4)]"
                   >
                     {t(item.key)}
                   </Link>

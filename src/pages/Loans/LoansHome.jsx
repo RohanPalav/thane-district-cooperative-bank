@@ -11,6 +11,10 @@ import {
   CircleDollarSign,
   Calculator,
   Percent,
+  HandCoins,
+  GraduationCap,
+  CarFront,
+  House,
 } from "lucide-react";
 
 import { useLanguage } from "../../context/LanguageContext";
@@ -19,8 +23,7 @@ const loanFacilities = [
   {
     id: "personalLoan",
     path: "/loans/personal-loan",
-    image: "/images/loans/personal_loan.png",
-    imageAlt: "Personal loan illustration",
+    Icon: HandCoins,
     title: {
       en: "Personal Loan",
       mr: "वैयक्तिक कर्ज",
@@ -33,8 +36,7 @@ const loanFacilities = [
   {
     id: "educationLoan",
     path: "/loans/education-loan",
-    image: "/images/loans/education_loan.png",
-    imageAlt: "Education loan illustration",
+    Icon: GraduationCap,
     title: {
       en: "Education Loan",
       mr: "शैक्षणिक कर्ज",
@@ -47,8 +49,7 @@ const loanFacilities = [
   {
     id: "vehicleLoan",
     path: "/loans/vehicle-loan",
-    image: "/images/loans/vehicle_loan.png",
-    imageAlt: "Vehicle loan illustration",
+    Icon: CarFront,
     title: {
       en: "Vehicle Loan",
       mr: "वाहन कर्ज",
@@ -61,8 +62,7 @@ const loanFacilities = [
   {
     id: "housingLoan",
     path: "/loans/housing-loan",
-    image: "/images/loans/housing_loan.png",
-    imageAlt: "Housing loan illustration",
+    Icon: House,
     title: {
       en: "Housing Loan",
       mr: "गृह कर्ज",
@@ -75,8 +75,7 @@ const loanFacilities = [
   {
     id: "goldLoan",
     path: "/loans/gold-loan",
-    image: "/images/loans/gold_loan.png",
-    imageAlt: "Gold loan illustration",
+    Icon: Coins,
     title: {
       en: "Gold Loan",
       mr: "सोने तारण कर्ज",
@@ -403,59 +402,52 @@ function LoansHome() {
           {/* LOAN FACILITY CARDS */}
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {loanFacilities.map(
-              ({ id, path, image, imageAlt, title, description }) => (
-                <Link
-                  key={id}
-                  to={path}
-                  className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#E7ECE9] bg-white/90 shadow-[0_5px_18px_rgba(23,62,112,0.045)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#C6DCCF] hover:shadow-[0_16px_30px_rgba(23,62,112,0.10)]"
-                >
-                  {/* LOAN ILLUSTRATION */}
+            {loanFacilities.map(({ id, path, Icon, title, description }) => (
+              <Link
+                key={id}
+                to={path}
+                className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-[#E7ECE9] bg-white/90 shadow-[0_5px_18px_rgba(23,62,112,0.045)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#C6DCCF] hover:shadow-[0_16px_30px_rgba(23,62,112,0.10)]"
+              >
+                {/* LOAN ICON */}
 
-                  <div className="relative flex h-[190px] items-center justify-center overflow-hidden bg-white sm:h-[210px]">
-                    <div className="pointer-events-none absolute h-44 w-44 rounded-full border border-white/60 transition-transform duration-700 group-hover:scale-110" />
+                <div className="relative flex h-[190px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#F3F8F4] to-[#EDF3FA] sm:h-[210px]">
+                  <div className="pointer-events-none absolute h-36 w-36 rounded-full border border-[#25845d]/10 transition-transform duration-700 group-hover:scale-110" />
 
-                    <img
-                      src={image}
-                      alt={imageAlt}
-                      loading="lazy"
-                      className={`relative z-10 h-full w-full object-contain p-3 transition-transform duration-700 ease-out ${
-                        id === "personalLoan"
-                          ? "scale-[1.08] group-hover:scale-[1.14]"
-                          : "scale-[0.88] group-hover:scale-[0.94]"
-                      }`}
+                  <div className="pointer-events-none absolute h-28 w-28 rounded-full bg-[#25845d]/[0.06] transition-transform duration-700 group-hover:scale-125" />
+
+                  <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-2xl border border-white/80 bg-white/90 text-[#25845d] shadow-[0_8px_25px_rgba(23,62,112,0.08)] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#25845d] group-hover:text-white">
+                    <Icon size={48} strokeWidth={1.5} />
+                  </div>
+                </div>
+
+                {/* CARD INFORMATION */}
+
+                <div className="flex flex-1 flex-col p-5">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="text-lg font-bold leading-snug text-[#173E70] transition-colors duration-300 group-hover:text-[#25845d]">
+                      {title[lang]}
+                    </h3>
+
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#EDF5F0] text-[#25845d] transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#25845d] group-hover:text-white">
+                      <ArrowRight size={18} />
+                    </div>
+                  </div>
+
+                  <p className="mt-3 flex-1 text-sm font-medium leading-6 text-[#596879]">
+                    {description[lang]}
+                  </p>
+
+                  <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-[#25845d]">
+                    {content.explore}
+
+                    <ArrowRight
+                      size={16}
+                      className="transition-transform duration-300 group-hover:translate-x-2"
                     />
                   </div>
-
-                  {/* CARD INFORMATION */}
-
-                  <div className="flex flex-1 flex-col p-5">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-lg font-bold leading-snug text-[#173E70] transition-colors duration-300 group-hover:text-[#25845d]">
-                        {title[lang]}
-                      </h3>
-
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#EDF5F0] text-[#25845d] transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#25845d] group-hover:text-white">
-                        <ArrowRight size={18} />
-                      </div>
-                    </div>
-
-                    <p className="mt-3 flex-1 text-sm font-medium leading-6 text-[#596879]">
-                      {description[lang]}
-                    </p>
-
-                    <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-[#25845d]">
-                      {content.explore}
-
-                      <ArrowRight
-                        size={16}
-                        className="transition-transform duration-300 group-hover:translate-x-2"
-                      />
-                    </div>
-                  </div>
-                </Link>
-              ),
-            )}
+                </div>
+              </Link>
+            ))}
           </div>
 
           {/* QUICK ACCESS SHORTCUTS */}

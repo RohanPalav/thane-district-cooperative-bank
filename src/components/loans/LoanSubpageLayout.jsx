@@ -7,7 +7,12 @@ import {
   Banknote,
   CalendarDays,
   CircleDollarSign,
+  HandCoins,
+  GraduationCap,
+  CarFront,
+  House,
 } from "lucide-react";
+
 import { useLanguage } from "../../context/LanguageContext";
 
 const floatingIcons = [
@@ -62,16 +67,26 @@ const floatingIcons = [
   },
 ];
 
-function LoanSubpageLayout({ titleKey, image, imageAlt, details }) {
+const loanIcons = {
+  personalLoan: HandCoins,
+  educationLoan: GraduationCap,
+  vehicleLoan: CarFront,
+  housingLoan: House,
+  goldLoan: Coins,
+};
+
+function LoanSubpageLayout({ titleKey, details }) {
   const { language, t } = useLanguage();
   const isMarathi = language === "mr";
+
+  const LoanIcon = loanIcons[titleKey] || Banknote;
 
   return (
     <main
       className="relative min-h-screen overflow-hidden"
       style={{
         fontFamily: isMarathi
-          ? '"Nirmala UI", "Noto Sans Devanagari", sans-serif'
+          ? '"Noto Sans Devanagari", sans-serif'
           : '"Poppins", sans-serif',
         background: `
           radial-gradient(
@@ -140,16 +155,21 @@ function LoanSubpageLayout({ titleKey, image, imageAlt, details }) {
 
       <section className="relative z-10 mx-auto max-w-[1440px] px-5 py-12 sm:px-8 lg:py-16">
         <div className="grid items-start gap-8 lg:grid-cols-[0.85fr_1.5fr] lg:gap-12 xl:gap-16">
-          {/* LEFT: ILLUSTRATION AND TITLE */}
+          {/* LEFT: LOAN ICON AND TITLE */}
 
           <aside className="flex flex-col items-center">
-            <div className="flex h-[260px] w-full items-center justify-center sm:h-[320px]">
-              <img
-                src={image}
-                alt={imageAlt}
-                className="h-full w-full object-contain p-3"
-                loading="eager"
-              />
+            <div className="relative flex h-[220px] w-full items-center justify-center sm:h-[260px]">
+              <div className="absolute h-48 w-48 rounded-full bg-gradient-to-br from-[#E5F3EA] to-[#EDF3FA] shadow-inner sm:h-56 sm:w-56" />
+
+              <div className="absolute h-40 w-40 rounded-full border border-[#25845d]/15 sm:h-48 sm:w-48" />
+
+              <div className="relative z-10 flex h-32 w-32 items-center justify-center rounded-[2rem] border border-white/80 bg-white/90 text-[#25845d] shadow-[0_12px_35px_rgba(23,62,112,0.10)] transition-transform duration-500 hover:scale-105 sm:h-36 sm:w-36">
+                <LoanIcon
+                  size={76}
+                  strokeWidth={1.4}
+                  className="drop-shadow-sm"
+                />
+              </div>
             </div>
 
             <h1 className="mt-3 text-center text-3xl font-bold text-[#173E70] sm:text-4xl">
@@ -228,6 +248,7 @@ function LoanSubpageLayout({ titleKey, image, imageAlt, details }) {
                   size={20}
                   className="mt-[5px] shrink-0 transition-transform duration-300 hover:translate-x-1"
                 />
+
                 <span>{t("loanTermsApply")}</span>
               </p>
 

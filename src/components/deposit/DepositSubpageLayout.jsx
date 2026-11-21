@@ -1,52 +1,112 @@
 import {
   Coins,
-  PiggyBank,
   Wallet,
-  Landmark,
   TrendingUp,
+  Landmark,
+  Banknote,
+  CalendarDays,
   CircleDollarSign,
 } from "lucide-react";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 const floatingIcons = [
-  { Icon: Coins, position: "left-[5%] top-[12%]", size: 42, delay: "0s" },
-  { Icon: PiggyBank, position: "right-[7%] top-[16%]", size: 50, delay: "1s" },
-  { Icon: Wallet, position: "left-[7%] bottom-[20%]", size: 44, delay: "2s" },
+  {
+    Icon: Coins,
+    position: "left-[5%] top-[9%]",
+    size: 43,
+    delay: "0s",
+    duration: "9s",
+  },
+  {
+    Icon: Wallet,
+    position: "right-[8%] top-[12%]",
+    size: 54,
+    delay: "1s",
+    duration: "11s",
+  },
   {
     Icon: TrendingUp,
-    position: "right-[6%] bottom-[24%]",
+    position: "left-[8%] top-[43%]",
     size: 46,
-    delay: "0.5s",
+    delay: "2s",
+    duration: "10s",
   },
-  { Icon: Landmark, position: "left-[44%] top-[8%]", size: 36, delay: "1.5s" },
+  {
+    Icon: Landmark,
+    position: "right-[6%] top-[42%]",
+    size: 48,
+    delay: "0.5s",
+    duration: "12s",
+  },
+  {
+    Icon: Banknote,
+    position: "left-[4%] bottom-[17%]",
+    size: 52,
+    delay: "1.5s",
+    duration: "10s",
+  },
+  {
+    Icon: CalendarDays,
+    position: "right-[5%] bottom-[20%]",
+    size: 45,
+    delay: "2.5s",
+    duration: "11s",
+  },
   {
     Icon: CircleDollarSign,
-    position: "right-[35%] bottom-[8%]",
-    size: 40,
-    delay: "2.5s",
+    position: "left-[47%] top-[34%]",
+    size: 38,
+    delay: "3s",
+    duration: "9s",
   },
 ];
 
-function DepositSubpageLayout({
-  title,
-  image,
-  imageAlt,
-  transitionName,
-  tabs,
-  activeTab,
-  onTabChange,
-  children,
-}) {
+function DepositSubpageLayout({ Icon, title, sidebarNavigation, children }) {
+  const { language } = useLanguage();
+  const isMarathi = language === "mr";
+
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#F3F8F5] via-[#F8F9FC] to-[#F7F5FA]">
+    <main
+      lang={isMarathi ? "mr" : "en"}
+      className="relative min-h-screen overflow-hidden"
+      style={{
+        fontFamily: isMarathi
+          ? '"Noto Sans Devanagari", sans-serif'
+          : '"Poppins", sans-serif',
+        background: `
+          radial-gradient(
+            ellipse at 8% 10%,
+            rgba(229, 246, 238, 0.95) 0%,
+            rgba(229, 246, 238, 0) 48%
+          ),
+          radial-gradient(
+            ellipse at 92% 90%,
+            rgba(139, 191, 247, 0.13) 0%,
+            rgba(139, 191, 247, 0) 45%
+          ),
+          linear-gradient(120deg, #fffce3 0%, #f7fbf4 48%, #edf6f2 100%)
+        `,
+        backgroundAttachment: "fixed",
+      }}
+    >
+      {/* FLOATING BACKGROUND ICONS */}
+
       <style>
         {`
-          @keyframes depositSubpageFloat {
+          @keyframes depositSubpageFloating {
             0%, 100% {
-              transform: translateY(0) rotate(-5deg);
+              transform: translateY(0px) rotate(-5deg);
             }
             50% {
-              transform: translateY(-16px) rotate(5deg);
+              transform: translateY(-18px) rotate(5deg);
             }
+          }
+
+          .deposit-subpage-floating-icon {
+            animation-name: depositSubpageFloating;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
           }
 
           @media (prefers-reduced-motion: reduce) {
@@ -57,94 +117,64 @@ function DepositSubpageLayout({
         `}
       </style>
 
-      {/* BACKGROUND DECORATION */}
-
       <div
         className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
         aria-hidden="true"
       >
-        <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#E5F0E9]/40 blur-3xl" />
-
-        <div className="absolute -right-40 bottom-10 h-96 w-96 rounded-full bg-[#E9EDF8]/40 blur-3xl" />
-
-        {floatingIcons.map(({ Icon, position, size, delay }, index) => (
-          <div
-            key={index}
-            className={`deposit-subpage-floating-icon absolute ${position} text-[#25845d]/[0.075]`}
-            style={{
-              animation: `depositSubpageFloat ${9 + (index % 3)}s ease-in-out ${delay} infinite`,
-            }}
-          >
-            <Icon size={size} strokeWidth={1.5} />
-          </div>
-        ))}
+        {floatingIcons.map(
+          ({ Icon: FloatingIcon, position, size, delay, duration }, index) => (
+            <div
+              key={index}
+              className={`deposit-subpage-floating-icon absolute ${position} text-[#25845d]/[0.11]`}
+              style={{
+                animationDuration: duration,
+                animationDelay: delay,
+              }}
+            >
+              <FloatingIcon size={size} strokeWidth={1.5} />
+            </div>
+          ),
+        )}
       </div>
 
-      {/* PAGE CONTENT */}
+      {/* MAIN CONTENT */}
 
-      <section className="relative z-10 mx-auto max-w-[1200px] px-5 py-12 sm:px-8 lg:py-16">
-        <div className="grid items-start gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16">
-          {/* LEFT ACCOUNT PANEL */}
+      <section className="relative z-10 mx-auto max-w-[1440px] px-5 py-12 sm:px-8 lg:py-16">
+        <div className="grid items-start gap-8 lg:grid-cols-[0.85fr_1.5fr] lg:gap-12 xl:gap-16">
+          {/* LEFT: ICON AND ACCOUNT NAVIGATION */}
 
           <aside className="flex flex-col items-center">
-            {/* ACCOUNT ILLUSTRATION */}
+            {/* ACCOUNT ICON - MATCHES LOAN SUBPAGE */}
 
-            <div className="flex h-[230px] w-full max-w-[320px] items-center justify-center p-4 sm:h-[260px]">
-              <img
-                src={image}
-                alt={imageAlt}
-                className="h-full w-full object-contain"
-                style={
-                  transitionName
-                    ? { viewTransitionName: transitionName }
-                    : undefined
-                }
-              />
+            <div className="relative flex h-[220px] w-full items-center justify-center sm:h-[260px]">
+              <div className="absolute h-48 w-48 rounded-full bg-gradient-to-br from-[#E5F3EA] to-[#EDF3FA] shadow-inner sm:h-56 sm:w-56" />
+
+              <div className="absolute h-40 w-40 rounded-full border border-[#25845d]/15 sm:h-48 sm:w-48" />
+
+              <div className="relative z-10 flex h-32 w-32 items-center justify-center rounded-[2rem] border border-white/80 bg-white/90 text-[#25845d] shadow-[0_12px_35px_rgba(23,62,112,0.10)] transition-transform duration-500 hover:scale-105 sm:h-36 sm:w-36">
+                <Icon size={76} strokeWidth={1.4} className="drop-shadow-sm" />
+              </div>
             </div>
 
             {/* ACCOUNT TITLE */}
 
-            <h1 className="mt-4 text-center text-xl font-bold text-[#173E70]">
+            <h1 className="mt-3 text-center text-3xl font-bold text-[#173E70] sm:text-4xl">
               {title}
             </h1>
 
-            {/* ACCOUNT TABS */}
+            {/* ACCOUNT NAVIGATION */}
 
             <nav
-              className="mt-7 flex w-full max-w-[320px] flex-col gap-2"
-              aria-label="Account information"
+              className="mt-8 w-full rounded-2xl border border-white/80 bg-white/90 px-5 py-5 text-center font-semibold text-[#173E70] shadow-[0_6px_22px_rgba(23,62,112,0.07)]"
+              aria-label={title}
             >
-              {tabs.map((tab) => {
-                const isActive = activeTab === tab.id;
-
-                return (
-                  <button
-                    key={tab.id}
-                    type="button"
-                    onClick={() => onTabChange(tab.id)}
-                    aria-current={isActive ? "page" : undefined}
-                    className={`relative px-4 py-4 text-center font-semibold transition-all duration-300 ${
-                      isActive
-                        ? "text-[#173E70]"
-                        : "text-[#687585] hover:text-[#25845d]"
-                    }`}
-                  >
-                    {tab.label}
-
-                    {isActive && (
-                      <span className="absolute bottom-0 left-1/2 h-[3px] w-10 -translate-x-1/2 rounded-full bg-[#25845d]" />
-                    )}
-                  </button>
-                );
-              })}
+              {sidebarNavigation}
             </nav>
           </aside>
 
-          {/* RIGHT INFORMATION PANEL */}
+          {/* RIGHT: ACCOUNT INFORMATION */}
 
-          <section className="min-w-0 px-2 py-4 sm:px-4 lg:px-0 lg:py-6">
-            {children}
-          </section>
+          {children}
         </div>
       </section>
     </main>

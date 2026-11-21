@@ -50,7 +50,7 @@ function MobileBankingPrivacyPolicy() {
             <p>
               {t("privacyPolicyParagraph1BeforeLink")}{" "}
               <a
-                href="https://www.thanedistrictbank.com"
+                href="https:\\tdcc.saavi.co.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 break-all font-medium text-[#087DB5] underline underline-offset-2 hover:text-[#173E70]"
