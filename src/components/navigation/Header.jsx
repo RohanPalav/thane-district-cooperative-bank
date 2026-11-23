@@ -201,7 +201,7 @@ function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 isolate w-full">
+    <header lang={language} className="sticky top-0 z-50 isolate w-full">
       {/* NOTICE TICKER ANIMATIONS */}
 
       <style>{`
@@ -244,6 +244,47 @@ function Header() {
           box-shadow: 0 0 8px rgba(255, 85, 85, 0.7);
           animation: securityPulse 1.2s ease-in-out infinite;
         }
+
+          /* Marathi typography adjustments */
+  header[lang="mr"] .header-bank-name {
+    font-size: 1.05rem;
+  }
+
+  header[lang="mr"] .header-nav-link {
+    font-size: 1.0625rem;
+  }
+
+  header[lang="mr"] .header-news-label {
+    font-size: 0.8125rem;
+  }
+
+  header[lang="mr"] .header-news-text {
+    font-size: 0.9375rem;
+  }
+
+  @media (min-width: 640px) {
+    header[lang="mr"] .header-bank-name {
+      font-size: 1.125rem;
+    }
+
+    header[lang="mr"] .header-news-label {
+      font-size: 0.875rem;
+    }
+
+    header[lang="mr"] .header-news-text {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    header[lang="mr"] .header-bank-name {
+      font-size: 1.25rem;
+    }
+
+    header[lang="mr"] .header-nav-link {
+      font-size: 1.125rem;
+    }
+  }
 
         @media (prefers-reduced-motion: reduce) {
           .notice-marquee-track {

@@ -479,3 +479,19 @@
     transform: none;
   }
 }
+
+/* =========================================
+   STATIC LEADERSHIP LINE ON MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .leadership-bottom-line {
+    height: 3px;
+    background: #278b43;
+  }
+
+  /* Remove the moving indicator */
+  .leadership-bottom-line::before {
+    display: none;
+  }
+}

@@ -7,29 +7,40 @@ import educationBanner from "../../assets/homepage/education-loan-banner.png";
 import personalBanner from "../../assets/homepage/personal-loan-banner.png";
 import agricultureBanner from "../../assets/homepage/agriculture-loan-banner.png";
 
+import housingBannerMobile from "../../assets/homepage/housing-loan-banner-mobile.png";
+import vehicleBannerMobile from "../../assets/homepage/vehicle-loan-banner-mobile.png";
+import educationBannerMobile from "../../assets/homepage/education-loan-banner-mobile.png";
+import personalBannerMobile from "../../assets/homepage/personal-loan-banner-mobile.png";
+import agricultureBannerMobile from "../../assets/homepage/agriculture-loan-banner-mobile.png";
+
 const banners = [
   {
     src: housingBanner,
+    mobileSrc: housingBannerMobile,
     alt: "Housing Loan promotion by Thane District Central Co-operative Bank",
     name: "Housing Loan",
   },
   {
     src: vehicleBanner,
+    mobileSrc: vehicleBannerMobile,
     alt: "Vehicle Loan promotion by Thane District Central Co-operative Bank",
     name: "Vehicle Loan",
   },
   {
     src: educationBanner,
+    mobileSrc: educationBannerMobile,
     alt: "Education Loan promotion by Thane District Central Co-operative Bank",
     name: "Education Loan",
   },
   {
     src: personalBanner,
+    mobileSrc: personalBannerMobile,
     alt: "Personal Loan promotion by Thane District Central Co-operative Bank",
     name: "Personal Loan",
   },
   {
     src: agricultureBanner,
+    mobileSrc: agricultureBannerMobile,
     alt: "Agriculture Loan promotion by Thane District Central Co-operative Bank",
     name: "Agriculture Loan",
   },
@@ -72,22 +83,31 @@ function HeroCarousel() {
         }
       }}
     >
-      {/* Full-width banner container */}
-      <div className="group relative aspect-[3/1] w-full overflow-hidden bg-white">
+      {/* Responsive banner container */}
+      {/* <div className="group relative aspect-[3/1] w-full overflow-hidden bg-white max-[767px]:aspect-[4/5]"> */}
+      <div className="group relative aspect-[3/1] w-full overflow-hidden bg-white max-[767px]:aspect-[6/7]">
         {banners.map((banner, index) => (
-          <img
+          <picture
             key={banner.src}
-            src={banner.src}
-            alt={banner.alt}
-            className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ease-in-out ${
+            className={`absolute inset-0 block h-full w-full transition-opacity duration-700 ease-in-out ${
               activeIndex === index
                 ? "opacity-100"
                 : "pointer-events-none opacity-0"
             }`}
-            loading={index === 0 ? "eager" : "lazy"}
-            fetchPriority={index === 0 ? "high" : "auto"}
-            aria-hidden={activeIndex !== index}
-          />
+          >
+            {/* Mobile banner */}
+            <source media="(max-width: 767px)" srcSet={banner.mobileSrc} />
+
+            {/* Desktop banner */}
+            <img
+              src={banner.src}
+              alt={banner.alt}
+              className="h-full w-full object-contain max-[767px]:object-cover"
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              aria-hidden={activeIndex !== index}
+            />
+          </picture>
         ))}
 
         {/* Previous button */}
